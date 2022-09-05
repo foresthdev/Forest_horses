@@ -1,6 +1,6 @@
 import React from "react";
 import {Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-
+import logotype from '../assets/logo_forest.png';
 
 
 function Encabezado() {
@@ -8,7 +8,7 @@ function Encabezado() {
     <div className="Navbar">
      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home"></Navbar.Brand>
+        <Navbar.Brand className="NvBrand"><img className= "logo" src={logotype}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
