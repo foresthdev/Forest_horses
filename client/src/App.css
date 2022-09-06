@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.Header{
+  background-image: url(./assets/caballos\ \(1\).jpg);
+  height: 15em;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .header-title {
   background-color: #173A3A;
   padding: 1em;
   color: #939745;
   display: inline-flex; 
+  font-family: 'Poppins', sans-serif;
   /* falta tipografia tamaño */
 }
