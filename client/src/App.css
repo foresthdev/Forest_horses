@@ -2,5 +2,6 @@
   background-color: #173A3A;
   padding: 1em;
   color: #939745;
+  display: inline-flex; 
   /* falta tipografia tamaño */
 }
