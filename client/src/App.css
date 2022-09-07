@@ -22,14 +22,21 @@
    bottom: 0;
    width: 100%;
    background-color: #939745;
+   
 }
 .footerFila1{
   display: flex;
   justify-content: space-evenly;
 }
+
 .footerFila2{
   display: flex;
   justify-content: space-evenly;
+  margin-left: 10px;
+  
+} 
+.icon{
+  margin-right: 10px;
 }
 
 /* mediaqueries */
