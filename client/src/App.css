@@ -22,15 +22,17 @@
    bottom: 0;
    width: 100%;
    background-color: #939745;
+   display: grid;
+   grid-template-rows: auto auto auto;
 }
-.footerFila1{
+/* .footerFila1{
   display: flex;
   justify-content: space-evenly;
 }
 .footerFila2{
   display: flex;
   justify-content: space-evenly;
-}
+} */
 
 /* mediaqueries */
 @media (max-width: 600px){
