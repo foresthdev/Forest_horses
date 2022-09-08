@@ -30,12 +30,7 @@
    bottom: 0;
    width: 100%;
    background-color: #939745;
-<<<<<<< HEAD
-   display: grid;
-   grid-template-rows: auto auto auto;
-=======
    
->>>>>>> 46696d8ae95624c2875a2d80c4c72796e4ae1f09
 }
 /* .footerFila1{
   display: flex;
@@ -45,16 +40,12 @@
 .footerFila2{
   display: flex;
   justify-content: space-evenly;
-<<<<<<< HEAD
-} */
-=======
   margin-left: 10px;
   
 } 
 .icon{
   margin-right: 10px;
 }
->>>>>>> 46696d8ae95624c2875a2d80c4c72796e4ae1f09
 
 /* ----------------------------------------------------APADRINA_COMPONENT---------------------------------------------------------------------------- */
 

@@ -2,7 +2,7 @@
 import Home from './pages/Home';
 import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
-import Section3 from './components/Section3jsx';
+import Section3 from './components/Section3';
 
 
 function App() {
