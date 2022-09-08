@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
+/* ----------------------------------------------------HEADER---------------------------------------------------------------------------- */
 .Header{
   background-image: url(./assets/horses-g035d826a3_1920.jpg);
   height: 15em;
@@ -16,27 +16,48 @@
   margin: 2em;
   /* falta tipografia tamaño */
 }
+/* mediaqueries */
+@media (max-width: 600px){
+  .Header{
+    background-size: auto;
+  }
+}
+
+/* ----------------------------------------------------FOOTER---------------------------------------------------------------------------- */
 .footer{
   position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
    background-color: #939745;
+<<<<<<< HEAD
    display: grid;
    grid-template-rows: auto auto auto;
+=======
+   
+>>>>>>> 46696d8ae95624c2875a2d80c4c72796e4ae1f09
 }
 /* .footerFila1{
   display: flex;
   justify-content: space-evenly;
 }
+
 .footerFila2{
   display: flex;
   justify-content: space-evenly;
+<<<<<<< HEAD
 } */
+=======
+  margin-left: 10px;
+  
+} 
+.icon{
+  margin-right: 10px;
+}
+>>>>>>> 46696d8ae95624c2875a2d80c4c72796e4ae1f09
 
-/* mediaqueries */
-@media (max-width: 600px){
-  .Header{
-    background-size: auto;
-  }
+/* ----------------------------------------------------APADRINA_COMPONENT---------------------------------------------------------------------------- */
+
+.section3{
+  background-color: #939745;
 }

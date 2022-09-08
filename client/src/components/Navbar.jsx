@@ -4,6 +4,7 @@ import logotype from '../assets/logo_forest.png';
 import perfil from '../assets/perfil.png';
 import { BsFillCartFill } from "react-icons/bs";
 
+// anchor del logo a pagina principal
 
 function Encabezado() {
   return (

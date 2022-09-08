@@ -2,6 +2,7 @@
 import Home from './pages/Home';
 import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
+import Section3 from './components/Section3jsx';
 
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Home />
+      <Section3 />
       <Footer />
+      
     </div>
   );
 }
