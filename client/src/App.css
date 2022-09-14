@@ -81,4 +81,19 @@
   height: 15rem;
 }
 
+/* Detalle del producto */
+
+.detail_content {
+  margin: 3rem;
+  width: 100%;
+  display: flex;
+}
+
+.detail_image {
+  width: 80%;
+}
+
+.detail_text {
+  width: 100%;
+}
 
