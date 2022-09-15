@@ -1,34 +1,19 @@
 [
     { "id":1, 
-    "image": "https://i.imgur.com/9NZV57d.jpg", 
+    "image": {"image_1":"https://i.imgur.com/9NZV57d.jpg", "image_2": "https://i.imgur.com/KucgSMo.jpg" , "image_3": "https://i.imgur.com/DfzcDIV.jpg" },
     "product": "Tassa de ceràmica",
     "product_name": "Al pas i amb calma", 
     "product_description": "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", 
     "product_price": "12"},
 
     { "id":2, 
-    "image": "https://i.imgur.com/KucgSMo.jpg", 
-    "product": "Tassa de ceràmica",
-    "product_name": "Al pas i amb calma", 
-    "product_description": "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", 
-    "product_price": "12"},
-
-    { "id":3, 
-    "image": "https://i.imgur.com/DfzcDIV.jpg", 
-    "product": "Tassa de ceràmica",
-    "product_name": "Al pas i amb calma", 
-    "product_description": "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", 
-    "product_price": "12"},
-
-    { "id":4, 
     "image": "https://i.imgur.com/B2guuEe.jpg", 
     "product": "Bossa de cotó",
     "product_name": "Color i vida", 
     "product_description": "Bossa ecològica de cotó 100% biodegradable de mesures 42 x 38 cm. Manilles planes de cotó natural. Rentable, reutilitzable i 100% biodegradable.", 
     "product_price": "12"},
 
-
-    { "id":5, 
+    { "id":3, 
     "image": "https://i.imgur.com/gKq7Lay.jpg", 
     "product": "Bossa de cotó ",
     "product_name": "Llibertat", 
