@@ -8,7 +8,7 @@ export default function Section3() {
         <h2>Apadrina una hectàrea</h2>
       </section>
       <section className="img-grid">
-        <img src={foto} alt="caballo" className="img-caballo" />
+        <img src={foto} alt="caballo" className="img-caballo" role="img" />
       </section>
 
       <section className="donacio">
