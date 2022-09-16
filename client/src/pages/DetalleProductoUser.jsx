@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import {Container , Row, Col} from 'react-bootstrap' 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -28,10 +29,26 @@ function DetalleProductoUser() {
         </div>
 
         <div className="detail_content">
-            <div>
+          <Container className="detail_image_container">
+            <Row>
+              <Col>
+                <img className="prime_detail_image" src={data.image} alt="" />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
                 <img className="detail_image" src={data.image} alt="" />
-                
-            </div>
+              </Col>
+              <Col>
+                <img className="detail_image" src={data.image} alt="" />
+              </Col>
+              <Col>
+                <img className="detail_image" src={data.image} alt="" />
+              </Col>
+            </Row>
+          </Container>
+
+            
             <div detail_text>
               <p>Producte:</p>
               <p>{data.product}</p>
