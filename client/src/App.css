@@ -89,8 +89,17 @@
   display: flex;
 }
 
+.detail_image_container {
+  width: 30%;
+  display: grid;
+  display: flex;
+}
+
+.up_detail_image_row {
+  width: 30%;
+}
 .detail_image {
-  width: 80%;
+  width: 50%;
 }
 
 .detail_text {

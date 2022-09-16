@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import {Container , Row, Col} from 'react-bootstrap' 
+import Form from 'react-bootstrap/Form'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -30,12 +31,12 @@ function DetalleProductoUser() {
 
         <div className="detail_content">
           <Container className="detail_image_container">
-            <Row>
+            <Row className="up_detail_image_row">
               <Col>
                 <img className="prime_detail_image" src={data.image} alt="" />
               </Col>
             </Row>
-            <Row>
+            <Row className="sub_detail_image_row">
               <Col>
                 <img className="detail_image" src={data.image} alt="" />
               </Col>
@@ -56,8 +57,15 @@ function DetalleProductoUser() {
               <p>{data.product_name}</p>
               <p>Descripció</p>
               <p>{data.product_description}</p>
-              <p>Preu</p>
-              <p>{data.product_price} €</p>
+              <Row className="preu_quantitat">
+                <Col className="preu_col">
+                  <p>Preu</p>
+                  <p>{data.product_price} €</p></Col>
+                <Col className="quantiat_col">
+                  <Form.Label>Quantitat</Form.Label>
+                  <Form.Control className="input_quantitat" type="number" placeholder="1" />
+                </Col>
+              </Row>
               <button>Afegir al cistell</button>
             </div>
         </div>
