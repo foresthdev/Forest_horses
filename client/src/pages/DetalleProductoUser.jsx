@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
 
-function Home() {
+function DetalleProducto() {
   return (
     <div className="Home">
       <Navbar />
@@ -25,4 +25,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default DetalleProducto;
