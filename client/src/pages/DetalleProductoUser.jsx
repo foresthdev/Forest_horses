@@ -33,18 +33,18 @@ function DetalleProductoUser() {
           <Container className="detail_image_container">
             <Row className="up_detail_image_row">
               <Col>
-                <img className="prime_detail_image" src={data.image} alt="" />
+                <img className="prime_detail_image" src={data.image.image_1} alt="" />
               </Col>
             </Row>
             <Row className="sub_detail_image_row">
               <Col>
-                <img className="detail_image" src={data.image} alt="" />
+                <img className="detail_image" src={data.image.image_1} alt="" />
               </Col>
               <Col>
-                <img className="detail_image" src={data.image} alt="" />
+                <img className="detail_image" src={data.image.image_2} alt="" />
               </Col>
               <Col>
-                <img className="detail_image" src={data.image} alt="" />
+                <img className="detail_image" src={data.image.image_3} alt="" />
               </Col>
             </Row>
           </Container>
