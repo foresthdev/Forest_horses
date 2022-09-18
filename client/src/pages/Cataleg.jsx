@@ -1,24 +1,24 @@
 import React from "react";
 
-import Navbar from "../components/Navbar";
-import Footer from '../components/Footer';
-
 export default function Cataleg() {
     return (
       <div className="cataleg">
-        <Navbar />
-        <div className="Header">
+        
+        <header className="Header">
         <div className="header-title" > {/*background image con parallax*/}
             <h1>Catàleg</h1>
         </div>
    
-        </div>
+        </header>
 
-        <section>
+        <main className="">
             <h1>Articles</h1>
-        </section>
+            <section className="articles_grid">
 
-        <Footer />
+            </section>
+            
+        </main>
+
         
       </div>
     );
