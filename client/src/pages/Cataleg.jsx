@@ -10,7 +10,8 @@ import { useState } from "react";
 
 
 export default function Cataleg() {
-  const [ items, setItems ] = useState([])
+  const [ items, setItems ] = useState([]);
+  //const [carItems, setCartItems ] = useState([]);
   useEffect(() =>{
 
     const getItems = new Promise(resolve => {
@@ -47,6 +48,7 @@ export default function Cataleg() {
                     <Card.Img className='' variant="top" src={item.image.image_1} alt={item.product} />
                     <Card.Body>
                       <button>Afegir al cistell</button>
+                      {/* <button onClick={onAdd}>Afegir al cistell</button> */}
                       <div className="card_text">
                       <Col>
                         <div>{item.product}</div>
