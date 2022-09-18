@@ -44,7 +44,7 @@ export default function Cataleg() {
                 {items.map(item => (
                   <Col key={item.id}>
                     <Card>
-                    <Card.Img className='' variant="top" src={item.image} alt={item.product} />
+                    <Card.Img className='' variant="top" src={item.image.image_1} alt={item.product} />
                     <Card.Body>
                       <button>Afegir al cistell</button>
                       <div className="card_text">
