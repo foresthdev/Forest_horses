@@ -1,13 +1,12 @@
 import React from "react";
 import "../App.css";
 import {Container , Row, Col} from 'react-bootstrap' 
-import Form from 'react-bootstrap/Form'
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
+import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
 
-const product = { id:1, image: {"image_1":"https://i.imgur.com/9NZV57d.jpg", "image_2": "https://i.imgur.com/KucgSMo.jpg" , "image_3": "https://i.imgur.com/DfzcDIV.jpg" }, product_name: "Tassa de ceràmica Al pas i amb calma", product_description: "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", product_price: "12"};
+//const product = { id:1, image: {image_1:"https://i.imgur.com/9NZV57d.jpg", image_2: "https://i.imgur.com/KucgSMo.jpg", image_3: "https://i.imgur.com/DfzcDIV.jpg" }, product_name: "Tassa de ceràmica Al pas i amb calma", product_description: "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", product_price: "12"};
+const product = { id:1, image: "https://i.imgur.com/9NZV57d.jpg", product_name: "Tassa de ceràmica Al pas i amb calma", product_description: "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", product_price: "12"};
+
 
 function DetalleProductoUser() {
   const [data, setData] = useState({});
@@ -16,21 +15,22 @@ function DetalleProductoUser() {
     const getData = new Promise(resolve => {
       setTimeout (() => {
         resolve(product);
-      }, 3000)
+      }, 1000)
     });
     getData.then(res => setData(res))
   }, [])
 
   return (
     <div className="DetalleProductoUser">
-      <Navbar />
-      <section className="sectionDetalleUser">
+      <header className="Header">
         <div className="header-title" > 
             <h1>Detall Producte</h1>
         </div>
+      
+      </header>
 
-        <div className="detail_content">
-          <Container className="detail_image_container">
+        <main className="detail_content">
+          {/* <Container className="detail_image_container">
             <Row className="up_detail_image_row">
               <Col>
                 <img className="prime_detail_image" src={data.image.image_1} alt="" />
@@ -45,6 +45,25 @@ function DetalleProductoUser() {
               </Col>
               <Col>
                 <img className="detail_image" src={data.image.image_3} alt="" />
+              </Col>
+            </Row>
+          </Container> */}
+
+<Container className="detail_image_container">
+            <Row className="up_detail_image_row">
+              <Col>
+                <img className="prime_detail_image" src={data.image} alt="" />
+              </Col>
+            </Row>
+            <Row className="sub_detail_image_row">
+              <Col>
+                <img className="detail_image" src={data.image} alt="" />
+              </Col>
+              <Col>
+                <img className="detail_image" src={data.image} alt="" />
+              </Col>
+              <Col>
+                <img className="detail_image" src={data.image} alt="" />
               </Col>
             </Row>
           </Container>
@@ -68,10 +87,8 @@ function DetalleProductoUser() {
               </Row>
               <button>Afegir al cistell</button>
             </div>
-        </div>
+        </main>
 
-      </section>
-      <Footer />
     </div>
   );
 }
