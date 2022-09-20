@@ -1,27 +1,31 @@
 // import './App.css';
 import React from "react";
 import { Button } from "react-bootstrap";
+import Menu from '../components/Menu';
 
 export default function Misdatos() {
     return (
-    <main>
-           
-      <div className="misdatos">
+      <div>
+    <header className="Header">
+        <div className="header-title">
+          {" "}
+          {/*background image con parallax*/}
           <h1>Les meves dades</h1>
-       </div>
-
-       <div className="body">
+        </div>
+      </header>
+    
+    <main> 
        {/* <h2 className="hola">Hola des de Forest Horses!</h2> */}
-       
-
+       <Menu />
        <div className = "lista">
-        <a
-          className="registro"
-          href="#registro"
-          style={{ color: "#fff", textDecoration: "none" }}
+            <a
+            className="registro"
+            href="#registro"
+            style={{ color: "#fff", textDecoration: "none" }}
         >
           Registra't
         </a>
+
         <a
           className="historial"
           href="#historial de comandes"
@@ -29,6 +33,7 @@ export default function Misdatos() {
         >
           Historial de comandes
         </a>
+
         <a
           className="tanca"
           href="#tanca sessió"
@@ -47,6 +52,8 @@ export default function Misdatos() {
             name="nom"
             />
         </div>
+        </div>
+
         <div className="form">
             <label>Cognoms</label>
             <input
@@ -55,6 +62,7 @@ export default function Misdatos() {
             name="cognoms"
             />
         </div>
+
         <div className="form">
             <label>Correu</label>
             <input
@@ -63,6 +71,7 @@ export default function Misdatos() {
             name="correu"
             />
         </div>
+
         <div className="form">
             <label>Contrasenya</label>
             <input
@@ -71,6 +80,7 @@ export default function Misdatos() {
             name="contrasenya"
             />
         </div>
+
         <div className="form">
             <label>Telèfon de contacte</label>
             <input
@@ -79,6 +89,7 @@ export default function Misdatos() {
             name="teléfono"
             />
         </div>
+
             <div className="form">
             <label>Direcció d'entrega</label>
             <input
@@ -87,17 +98,15 @@ export default function Misdatos() {
             name="dirección"
             />
       </div>
+
       <div>
       <Button className="boton">Modificar</Button>
       <Button className="boton">Desar</Button>
       </div>
-      </div>
-      
-      
-          
-        </div>
-    </main>
-    
+     
+      </main>
+     
+      </div>  
     )}
 
    

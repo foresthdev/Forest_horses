@@ -2,6 +2,7 @@
 import Home from './pages/Nav/Home';
 import Apadrina from './pages/Nav/Apadrina';
 import Registrados from './pages/Registrados';
+import Mevesdades from './pages/Mevesdades';
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <Home />
       <Apadrina />
       <Registrados />
+      <Mevesdades />
+    
       
       
     </div>
