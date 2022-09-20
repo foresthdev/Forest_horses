@@ -1,6 +1,5 @@
 // import './App.css';
 import Home from './pages/Home';
-import DetalleProductoUser from './pages/DetalleProductoUser';
 
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       
       <Home />
-      <DetalleProductoUser />
       
       
     </div>
