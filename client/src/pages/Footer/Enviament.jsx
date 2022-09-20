@@ -3,7 +3,7 @@ import React from "react";
 export default function Enviament() {
   return (
     <div>
-      <Navbar />
+      
       <header className="Header">
         <div className="header-title">
           {" "}
@@ -27,7 +27,7 @@ export default function Enviament() {
 
         <h6>No m'arribat la comanda?</h6>
       </main>
-      <Footer />
+      
     </div>
   );
 }
