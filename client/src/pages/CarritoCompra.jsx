@@ -1,9 +1,9 @@
 import React from "react";
-import Form from 'react-bootstrap/Form'
+//import Form from 'react-bootstrap/Form'
 
 
 function CarritoCompra(props) {
-  const { carItems, onAdd } = props;
+  //const { carItems, onAdd } = props;
   
   return (
     <div className="CarritoCompra">
@@ -16,7 +16,7 @@ function CarritoCompra(props) {
       </header>
 
       <main>
-          <div>{carItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
+          {/* <div>{carItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
           {carItems.map((item) => (
             <stack direction="horizontal" gap={2} className="d-frex align-items-center" key={item.id}>
               <img className="" src={item.image.image_1} alt={item.product} />
@@ -27,13 +27,13 @@ function CarritoCompra(props) {
                 <button onClick={() => onAdd(item)} className="add">+</button>
                 <Form.Control className="input_quantitat" type="number" placeholder="1" />
                 {/* <button onClick={() => onRemove(item)} className="remove">-</button> */}
-              </div>
+              {/* </main></div>
               <div>
                 {item.qty} x {item.price.toFixed(2)}
               </div>
             </stack>
 
-          ))}
+          ))} */} 
       </main>
     
 
