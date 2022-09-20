@@ -1,21 +1,17 @@
 // import './App.css';
-import Home from './pages/Home';
-import Navbar from "./components/Navbar";
-import Footer from './components/Footer';
-import Section3 from './components/Section3';
+import Home from './pages/Nav/Home';
+import Apadrina from './pages/Nav/Apadrina';
 import Registrados from './pages/Registrados';
-import Mevesdades from './pages/Mevesdades';
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      
       <Home />
-      <Section3 />
-      <Footer />
-      <Mevesdades />
+      <Apadrina />
       <Registrados />
-     
+      
       
     </div>
   );

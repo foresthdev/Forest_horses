@@ -80,3 +80,29 @@
   background-color: #173A3A;
   height: 15rem;
 }
+
+/* Detalle del producto */
+
+.detail_content {
+  margin: 3rem;
+  width: 100%;
+  display: flex;
+}
+
+.detail_image_container {
+  width: 30%;
+  display: grid;
+  display: flex;
+}
+
+.up_detail_image_row {
+  width: 30%;
+}
+.detail_image {
+  width: 50%;
+}
+
+.detail_text {
+  width: 100%;
+}
+
