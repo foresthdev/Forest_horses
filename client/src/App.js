@@ -1,6 +1,7 @@
 // import './App.css';
 import Home from './pages/Nav/Home';
 import Apadrina from './pages/Nav/Apadrina';
+import Registrados from './pages/Registrados';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       
       <Home />
       <Apadrina />
+      <Registrados />
       
       
     </div>
