@@ -1,9 +1,9 @@
 import React from "react";
-import "../App.css";
+import "../../App.css";
 import {Container , Row, Col} from 'react-bootstrap' 
 import Form from 'react-bootstrap/Form'
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from '../../components/Navbar';
+import Footer from "../../components/Footer";
 
 import { useEffect, useState } from 'react';
 
