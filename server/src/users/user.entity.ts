@@ -1,15 +1,14 @@
 import {
-  CannotCreateEntityIdMapError,
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn,
-  OneToMany,
+  //JoinColumn,
+  //OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity('users') //table name
-export class UserEntity {
+@Entity('Users') //table name
+export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -40,11 +39,11 @@ export class UserEntity {
   @CreateDateColumn()
   updteAt: string;
 
-//   @OneToMany((type) => CannotCreateEntityIdMapError, (cart) => cart.id)
-//   @JoinColumn()
-//   cart: CartEntity[];
+  //   @OneToMany((type) => CartEntity, (cart) => cart.id)
+  //   @JoinColumn()
+  //   cart: CartEntity[];
 
-//   @OneToMany((type) => OrderEntity, (order) => order.id)
-//   @JoinColumn()
-//   order: OrderEntity;
+  //   @OneToMany((type) => OrderEntity, (order) => order.id)
+  //   @JoinColumn()
+  //   order: OrderEntity;
 }
