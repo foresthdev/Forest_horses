@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillTelephoneFill, BsEnvelope, BsInstagram } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -33,25 +34,30 @@ function Footer() {
       <div className="footerFila2">
         <a
           className="contact"
-          href="#Contacte"
+          href="https://foresthorses.wixsite.com/foresthorses/contacte"
+          target="_blank"
           style={{ color: "#fff", textDecoration: "none" }}
         >
           Contacte
         </a>
-        <a
-          className="envio"
-          href="#MetodosEnvio"
-          style={{ color: "#fff", textDecoration: "none" }}
-        >
-          Cost d’enviament i recollida
-        </a>
-        <a
-          className="pago"
-          href="#MetodosPago"
-          style={{ color: "#fff", textDecoration: "none" }}
-        >
-          Mètodes de pagament
-        </a>
+        <Link to="enviament">
+          <a
+            className="envio"
+            href="#MetodosEnvio"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Cost d’enviament i recollida
+          </a>
+        </Link>
+        <Link to="pagament">
+          <a
+            className="pago"
+            href="#MetodosPago"
+            style={{ color: "#fff", textDecoration: "none" }}
+          >
+            Mètodes de pagament
+          </a>
+        </Link>
       </div>
     </div>
   );

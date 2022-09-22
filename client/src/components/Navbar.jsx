@@ -8,6 +8,7 @@ import {
 import logotype from "../assets/logo_horizontal.png";
 import perfil from "../assets/perfil.png";
 import cart from "../assets/navcart.png";
+import { Link } from "react-router-dom";
 
 // anchor del logo a pagina principal wix
 
@@ -16,21 +17,21 @@ function Encabezado() {
     <div className="Navbar">
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
-          <Navbar.Brand className="NvBrand">
+          <Navbar.Brand className="NvBrand"><Link to="/">
             <img
               className="logo"
               src={logotype}
               alt="logo"
               style={{ width: "6em" }}
-            />
+            /></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
-              <Nav.Link href="#pricing">Associació</Nav.Link>
-              <Nav.Link href="#pricing">Catàleg</Nav.Link>
-              <Nav.Link href="#pricing">Apadrina</Nav.Link>
+            <Nav.Link href="https://foresthorses.wixsite.com/foresthorses/l-associaci%C3%B3" target="_blank" style={{textDecoration: "none", color: "#4A4A4B"}}>Associació</Nav.Link>
+              <Nav.Link ><Link to="cataleg" style={{textDecoration: "none", color: "#4A4A4B"}}>Catàleg</Link></Nav.Link>
+              <Nav.Link><Link to="apadrina" style={{textDecoration: "none", color: "#4A4A4B"}}>Apadrina</Link></Nav.Link>
               <img
                 className="perfil"
                 alt="profile"
@@ -49,13 +50,13 @@ function Encabezado() {
                   Tancar sessió
                 </NavDropdown.Item>
               </NavDropdown>
-              <Navbar.Brand className="NvBrand">
+              <Navbar.Brand className="NvBrand"><Link to="carrito">
                 <img
                   className="cart"
                   src={cart}
                   alt="cart"
                   style={{ width: "2em" }}
-                />
+                /></Link>
               </Navbar.Brand>
             </Nav>
           </Navbar.Collapse>
