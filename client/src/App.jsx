@@ -11,11 +11,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Registrados />
-        <Mevesdades />
-
         <Routes />
         <Footer />
+        <Registrados />
+        <Mevesdades />
       </div>
     </BrowserRouter>
   );
