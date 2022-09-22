@@ -1,7 +1,7 @@
 // import './App.css';
 import React from "react";
 import { Button } from "react-bootstrap";
-import Menu from '../components/Menu';
+import Menu from '../../components/Menu';
 
 export default function Registrados() {
   return (
@@ -17,7 +17,7 @@ export default function Registrados() {
       <main>
         {/* <h2 className="hola">Hola des de Forest Horses!</h2> */}
 
-        
+        <Menu />
         <div className="formulario" style={{ color: "#fff" }}>
           <div className="form">
             <label>Nom</label>

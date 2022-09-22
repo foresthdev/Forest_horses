@@ -1,17 +1,18 @@
-// import './App.css';
+import './App.css';
 import Navbar from './components/Navbar';
-// import Routes from './Routes';
+import Routes from './Routes';
 import {BrowserRouter} from "react-router-dom";
 import Footer from './components/Footer'
-
-
+import Registrados from './pages/login/Registrados';
+import Mevesdades from './pages/login/Mevesdades';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        
+        <Registrados />
+        <Mevesdades />
 
         <Routes />
         <Footer />
@@ -21,3 +22,4 @@ function App() {
 }
 
 export default App;
+ 
