@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { DataSource } from 'typeorm';
 import { User } from './users/user.entity';
 import { UsersModule } from './users/users.module';
+import { UsersControllerController } from './users.controller/users.controller.controller';
 
 @Module({
   imports: [
@@ -21,7 +22,7 @@ import { UsersModule } from './users/users.module';
     UsersModule,
     //UsersModule
   ],
-  controllers: [AppController],
+  controllers: [AppController, UsersControllerController],
   providers: [AppService],
 })
 export class AppModule {
