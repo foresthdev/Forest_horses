@@ -1,7 +1,7 @@
 // import './App.css';
 import React from "react";
 import { Button } from "react-bootstrap";
-import Menu from '../components/Menu';
+import Menu from '../../components/Menu';
 
 export default function Misdatos() {
     return (
