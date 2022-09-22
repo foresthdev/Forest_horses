@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import Navbar from './components/Navbar';
 import Routes from './Routes';
 import {BrowserRouter} from "react-router-dom";
@@ -11,8 +11,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        
-
         <Routes />
         <Footer />
       </div>
