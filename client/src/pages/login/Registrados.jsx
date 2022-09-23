@@ -1,7 +1,7 @@
 // import './App.css';
 import React from "react";
 import { Button } from "react-bootstrap";
-import Menu from '../../components/Menu';
+import MenuLateral from "../../components/MenuLateral";
 
 export default function Registrados() {
   return (
@@ -14,17 +14,16 @@ export default function Registrados() {
         </div>
       </header>
 
-      <main>
+      <main style= {{background: "#939745"}}>
         {/* <h2 className="hola">Hola des de Forest Horses!</h2> */}
+        <MenuLateral />
 
-        <Menu />
-        <div className="formulario" style={{ color: "#fff" }}>
+        <div className="formulario" style={{ color: "black" }}>
           <div className="form">
             <label>Nom</label>
             <input className="input" type="text" name="nom" />
           </div>
         </div>
-
         <div className="form">
           <label>Cognoms</label>
           <input className="input" type="text" name="cognoms" />
@@ -37,10 +36,8 @@ export default function Registrados() {
           <label>Contrasenya</label>
           <input className="input" type="text" name="contrasenya" />
         </div>
-        <Button className="boton">Desar</Button>
-        
+        <Button className="boton" style= {{background:"#173A3A", border: "#173A3A" }}>Desar</Button>
       </main>
-      <Menu />
     </div>
   );
 }
