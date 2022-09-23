@@ -21,3 +21,5 @@ import { User } from './users/user.entity';
   providers: [AppService],
 })
 export class AppModule {}
+
+// synchronize tells TypeORM to automatically create or update the tables in the database based on the entity classes passed to the entities
