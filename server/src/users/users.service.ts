@@ -15,7 +15,7 @@ export class UsersService {
   }
 
   findOne(id: number): Promise<User> {
-    // In the nestjs documentation (https://docs.nestjs.com/techniques/database) say id: string
+    // In the nestjs documentation (https://docs.nestjs.com/techniques/database) say id: string pero da error
     return this.usersRepository.findOneBy({ id });
   }
 
