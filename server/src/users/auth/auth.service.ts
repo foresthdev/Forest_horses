@@ -12,6 +12,15 @@ export class AuthService {
     private jwt: JwtService,
   ) {}
 
+  //signup method allow users to register in the app
+  async sigup(user: User): Promise<User> {
+    const salt = await bcrypt.genSalt();
+    const hash = await bcrypt.hash(user.password, salt);
+    user.password = hash;
+    return await this.userRepository.save(user);
+  }
+
+  // method to validate the users’ details
   async validateUser(username: string, password: string): Promise<any> {
     const foundUser = await this.userRepository.findOne({ username });
     if (foundUser) {
@@ -25,6 +34,7 @@ export class AuthService {
     return null;
   }
 
+  //login method to generate a jwt token for the authenticated user.
   async login(user: any) {
     const payload = { username: user.username, sub: user.id, role: user.role };
 
