@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -13,7 +13,7 @@ export class AuthService {
   ) {}
 
   //signup method allow users to register in the app
-  async sigup(user: User): Promise<User> {
+  async signup(user: User): Promise<User> {
     const salt = await bcrypt.genSalt();
     const hash = await bcrypt.hash(user.password, salt);
     user.password = hash;
@@ -39,7 +39,7 @@ export class AuthService {
     const payload = { username: user.username, sub: user.id, role: user.role };
 
     return {
-      access_toen: this.jwt.sign(payload),
+      access_token: this.jwt.sign(payload),
     };
   }
 }
