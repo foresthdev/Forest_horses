@@ -1,5 +1,6 @@
 import React from "react";
 import Form from 'react-bootstrap/Form'
+import { formatCurrency} from '../../utilities/formatCurrency'
 
 
 function CarritoCompra(props) {
@@ -46,10 +47,10 @@ function CarritoCompra(props) {
                 <button onClick={() => onRemove(item)} className="remove">-</button>
               </div>
               <div>
-                {item.qty} x {item.price.toFixed(2)}
+                {item.qty} x {formatCurrency} {item.price.toFixed(2)}
               </div>
               <div className="block col-1 text-right">
-                {item.qty} x {item.price.toFixed}
+                {item.qty} x {formatCurrency}{item.price.toFixed}
               </div>
             </stack>
             
@@ -58,19 +59,19 @@ function CarritoCompra(props) {
             <aside>
               <div className="row">
                 <div className="col-2">Items Price</div>
-                <div className="col-1 text-right">{itemsPrice.toFixed(2)}</div>
+                <div className="col-1 text-right">{formatCurrency}{itemsPrice.toFixed(2)}</div>
               </div>
               <div className="row">
                 <div className="col-2">Tax Price</div>
-                <div className="col-1 text-right">{taxPrice.toFixed(2)}</div>
+                <div className="col-1 text-right">{formatCurrency}{taxPrice.toFixed(2)}</div>
               </div>
               <div className="row">
                 <div className="col-2">Shipping Price</div>                                                            
-                <div className="col-1 text-right">{shippingPrice.toFixed(2)}</div>
+                <div className="col-1 text-right">{formatCurrency}{shippingPrice.toFixed(2)}</div>
               </div>
               <div className="row">
                 <div className="col-2">Total Price</div>
-                <div className="col-1 text-right"><strong>{totalPrice.toFixed(2)}</strong></div>
+                <div className="col-1 text-right"><strong>{formatCurrency}{totalPrice.toFixed(2)}</strong></div>
               </div>
               <hr />
               <div className="row">
