@@ -9,7 +9,7 @@ E-Commerce web aplication
 ## Project Learning Goals
 
 - Rple Based Authentitication
-- SQL Database with PostgreSQL
+- SQL Database with MySQL
 - EXplore Deployment/DevOPs
 - React frontend in JavaScript
 - React Hooks
