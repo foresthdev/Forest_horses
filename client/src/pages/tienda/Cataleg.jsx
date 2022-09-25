@@ -6,7 +6,6 @@ import storeItems from "../../data/products.json";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { formatCurrency } from "../../utilities/formatCurrency"
 //import axios from 'axios';
 
 
@@ -73,7 +72,7 @@ export default function Cataleg() {
                         <div>{item.product}</div>
                       </Col>
                       <Col>
-                        <div>{formatCurrency}{item.price}</div>
+                        <div>€{item.price}</div>
                       </Col>
                       </div>
                     </Card.Body>
