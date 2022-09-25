@@ -1,10 +1,7 @@
-
-
 ## Project Description
 
 E-Commerce web aplication
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 
 ## Project Learning Goals
 
@@ -14,7 +11,6 @@ E-Commerce web aplication
 - React frontend in JavaScript
 - React Hooks
 - SSR with NestJS
-
 
 ## Installation
 
