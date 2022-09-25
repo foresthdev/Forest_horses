@@ -17,7 +17,7 @@ function CarritoCompra(props) {
     }
   }
 
-  const itemsPrice = carItems.reduce((a,c) => a+c.price * c.qty, 0);
+  const itemsPrice = carItems.reduce((a, c) => a + c.price * c.qty, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 50;
   const totalPrice = itemsPrice +taxPrice + shippingPrice;
