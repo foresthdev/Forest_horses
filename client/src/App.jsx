@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Registrados from './pages/login/Registrados';
 import Mevesdades from './pages/login/Mevesdades';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
         <Footer />
         <Registrados />
         <Mevesdades />
+        
       </div>
     </BrowserRouter>
   );
