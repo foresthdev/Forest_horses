@@ -1,22 +1,30 @@
 import React from "react";
-<<<<<<< HEAD:client/src/pages/Nav/Home.jsx
+import "../../App.css";
 import Header from "../../components/Header";
-import Navbar from "../../components/Navbar";
-import Footer from '../../components/Footer';
-import Section3 from '../../components/Section3';
-=======
-import Header from "../components/Header";
-import Footer from '../components/Footer';
-import Section3 from '../components/Section3';
->>>>>>> 57107849f31a0fa6caa96212dc3412f160fd5491:client/src/pages/Home.jsx
-
+import CatalegHome from "../../components/CatalegHome";
 
 function Home() {
   return (
     <div className="Home">
       <Header />
-      <Section3 />
-      <Footer />
+      <main>
+        <CatalegHome />
+        <div className="section3-grid">
+          <section className="apadrina">
+            <h2>Apadrina una hectàrea</h2>
+          </section>
+          <section className="img-grid">
+            <img
+              src="https://i.imgur.com/wfNCHWw.jpg"
+              alt="caballo en la montaña"
+              className="img-caballo"
+            />
+          </section>
+          <section className="donacio">
+            <h2>Donació</h2>
+          </section>
+        </div>
+      </main>
     </div>
   );
 }
