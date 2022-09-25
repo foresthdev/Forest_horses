@@ -27,7 +27,9 @@ export default function Cataleg() {
       setCartItems([...carItems, {...item, qty: 1}]);
     }
   };
-  //const [carItems, setCartItems ] = useState([]);
+
+  
+ 
   useEffect(() =>{
 
     const getItems = new Promise(resolve => {
