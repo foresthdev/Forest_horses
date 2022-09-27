@@ -1,22 +1,17 @@
 import React from "react";
 import Form from 'react-bootstrap/Form'
+import { useShoppingCart } from "../../context/ShoppingCartContex"
+import storeItems from "../../data/products.json"
 
 
-function CarritoCompra(props) {
-  const { cartItems, setCartItems, onAdd } = props;
-
-  const onRemove = (item) => {
-    const exist = cartItems.find((x) => x.id ===item.id);
-    if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== item.id));
-    } else {
-      setCartItems (
-        cartItems.map((x) =>
-        x.id === item.id ? {...exist, qty: exist.qty -1 }:x
-        )
-      );
-    }
-  }
+function CarritoCompra({ id, quantity, cartItems}) {
+  const { 
+    increaseCartItems,
+    decreaseCartItems,
+    removeFromCart
+  } = useShoppingCart()
+  const item =storeItems.find(i => i.id === id)
+  if (item == null) return null
 
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const taxPrice = itemsPrice * 0.14;
@@ -41,9 +36,10 @@ function CarritoCompra(props) {
                 {item.product}
               </div>
               <div>
-                <button onClick={() => onAdd(item)} className="add">+</button>
+                <button onClick={() => increaseCartItems(item)} className="add">+</button>
                 <Form.Control className="input_quantitat" type="number" placeholder="1" />
-                <button onClick={() => onRemove(item)} className="remove">-</button>
+                <button onClick={() => decreaseCartItems(item)} className="decrease">-</button>
+                <button onClick={() => removeFromCart(item)} className="decrease">Treure</button>
               </div>
               <div>
                 {item.qty} x € {item.price.toFixed(2)}

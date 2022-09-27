@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createContext, useContext } from "react";
+import CarritoCompra from "../pages/tienda/CarritoCompra"
 
 const ShoppingCartContex = createContext({})
 
@@ -73,6 +74,7 @@ export function ShoppingCartProvider({ children }) {
             cartQuantity
              }}>
             {children}
+            <CarritoCompra />
         </ShoppingCartContex.Provider>
     )
     

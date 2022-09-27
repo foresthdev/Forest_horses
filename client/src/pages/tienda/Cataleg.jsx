@@ -11,7 +11,7 @@ import { useShoppingCart } from "../../context/ShoppingCartContex"
 
 
 
-export default function Cataleg() {
+export default function Cataleg(id) {
   const [ items, setItems ] = useState([]);
   const { 
     getItemQuantity,
