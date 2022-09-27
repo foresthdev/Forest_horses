@@ -12,21 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function Cataleg() {
   const [ items, setItems ] = useState([]);
-  const [cartItems, setCartItems ] = useState([]);
-  
-  const onAdd =(item) => {
-    const exist = cartItems.find((x) => x.id === item.id);
-    if (exist) {
-      setCartItems (
-        cartItems.map((x) =>
-        x.id === item.id ? {...exist, qty: exist.qty +1 }:x
-        )
-      );
-      
-    } else {
-      setCartItems([...cartItems, {...item, qty: 1}]);
-    }
-  };
+ 
 
   
  
@@ -66,7 +52,7 @@ export default function Cataleg() {
                     <Card.Img className='' variant="top" src={item.image.image_1} alt={item.product} />
                     <Card.Body>
                       <Link to={`/detalle/${item.id}`}><button>Mas detalle</button></Link>
-                      <button onClick={onAdd}>Afegir al cistell</button>
+                      <button>Afegir al cistell</button>
                       <div className="card_text">
                       <Col>
                         <div>{item.product}</div>

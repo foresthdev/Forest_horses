@@ -5,11 +5,12 @@ import {BrowserRouter} from "react-router-dom";
 import Footer from './components/Footer'
 import Registrados from './pages/login/Registrados';
 import Mevesdades from './pages/login/Mevesdades';
-
+import { ShoppingCartProvider } from './context/ShoppingCartContex'
 
 function App() {
   return (
     <BrowserRouter>
+    <ShoppingCartProvider>
       <div className="App">
         <Navbar />
         <Routes />
@@ -18,6 +19,7 @@ function App() {
         <Mevesdades />
         
       </div>
+      </ShoppingCartProvider>
     </BrowserRouter>
   );
 }
