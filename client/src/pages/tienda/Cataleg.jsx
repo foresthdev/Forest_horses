@@ -12,19 +12,19 @@ import { Link } from "react-router-dom";
 
 export default function Cataleg() {
   const [ items, setItems ] = useState([]);
-  const [carItems, setCartItems ] = useState([]);
+  const [cartItems, setCartItems ] = useState([]);
   
   const onAdd =(item) => {
-    const exist = carItems.find((x) => x.id === item.id);
+    const exist = cartItems.find((x) => x.id === item.id);
     if (exist) {
       setCartItems (
-        carItems.map((x) =>
+        cartItems.map((x) =>
         x.id === item.id ? {...exist, qty: exist.qty +1 }:x
         )
       );
       
     } else {
-      setCartItems([...carItems, {...item, qty: 1}]);
+      setCartItems([...cartItems, {...item, qty: 1}]);
     }
   };
 
