@@ -15,11 +15,11 @@ export default function Cataleg() {
   const [cartItems, setCartItems ] = useState([]);
   
   const onAdd =(item) => {
-    const exist = cartItems.find(product => product.id === item.id);
-    if (exist) {
+    const existItem = cartItems.find(product => product.id === item.id);
+    if (existItem) {
       setCartItems (
         cartItems.map((product) =>
-        product.id === item.id ? {...exist, quantity: exist.quantity +1 }:product
+        product.id === item.id ? {...existItem, quantity: existItem.quantity +1 }:product
         )
       );
       
