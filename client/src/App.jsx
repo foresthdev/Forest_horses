@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import Routes from './Routes';
 import {BrowserRouter} from "react-router-dom";
 import Footer from './components/Footer'
-import Registrados from './pages/login/Registrados';
 import Mevesdades from './pages/login/Mevesdades';
+import Login from './pages/login/Login'
 
 
 function App() {
@@ -14,9 +14,8 @@ function App() {
         <Navbar />
         <Routes />
         <Footer />
-        <Registrados />
         <Mevesdades />
-        
+        <Login />
       </div>
     </BrowserRouter>
   );
