@@ -53,8 +53,15 @@ export function ShoppingCartProvider({ children }) {
             }
         })
     }
+
+    //funcion eliminar
+    function removeFromCart(id) {
+        setCartItems(currentItems => {
+            return currentItems.filter(item => item.id !== id) //devuelve el filtro de los articulos cuando el item no es igual al item entonces se elimina
+        })
+    }
     return (
-        <ShoppingCartContex.Provider value={{ getItemQuantity, increaseCartItems, decreaseCartItems }}>
+        <ShoppingCartContex.Provider value={{ getItemQuantity, increaseCartItems, decreaseCartItems, removeFromCart }}>
             {children}
         </ShoppingCartContex.Provider>
     )
