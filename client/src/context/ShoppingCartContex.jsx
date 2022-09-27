@@ -20,9 +20,24 @@ export function ShoppingCartProvider({ children }) {
     }
 
     //funcion incrememtar
-    
+    function increaseCartItems(id) {
+        
+        setCartItems(currentItems => {
+            if (currentItems.find(item => item.id === id) == null) { //encuentra los items actuales y si no hay da nulo. 
+                return [...currentItems, { id, quantity: 1}] //devuelve todos los articulos seleccionados y los incrementa por 1
+            } else {
+                return currentItems.map(item => { // mapea los artículos
+                    if (item.id === id) {//si hay el artículo
+                        return { ...item, quantity: item.quantity +1 }// incrementa por 1 el artículo
+                    } else {
+                        return item // si no dejalo igual
+                    }
+                })
+            }
+        })
+    }
     return (
-        <ShoppingCartContex.Provider value={{ getItemQuantity }}>
+        <ShoppingCartContex.Provider value={{ getItemQuantity, increaseCartItems }}>
             {children}
         </ShoppingCartContex.Provider>
     )
