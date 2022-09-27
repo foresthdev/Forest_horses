@@ -1,23 +1,24 @@
 import React from "react";
 import Form from 'react-bootstrap/Form'
 
+
 function CarritoCompra(props) {
-  const { carItems, setCartItems, onAdd } = props;
+  const { cartItems, setCartItems, onAdd } = props;
 
   const onRemove = (item) => {
-    const exist = carItems.find((x) => x.id ===item.id);
+    const exist = cartItems.find((x) => x.id ===item.id);
     if (exist.qty === 1) {
-      setCartItems(carItems.filter((x) => x.id !== item.id));
+      setCartItems(cartItems.filter((x) => x.id !== item.id));
     } else {
       setCartItems (
-        carItems.map((x) =>
+        cartItems.map((x) =>
         x.id === item.id ? {...exist, qty: exist.qty -1 }:x
         )
       );
     }
   }
 
-  const itemsPrice = carItems.reduce((a, c) => a + c.price * c.qty, 0);
+  const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const taxPrice = itemsPrice * 0.14;
   const shippingPrice = itemsPrice > 2000 ? 0 : 50;
   const totalPrice = itemsPrice +taxPrice + shippingPrice;
@@ -32,8 +33,8 @@ function CarritoCompra(props) {
       </header>
 
       <main>
-          <div>{carItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
-          {carItems.map((item) => (
+          <div>{cartItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
+          {cartItems.map((item) => (
             <stack  direction="horizontal" gap={2} className="d-frex align-items-center" key={item.id}>
               <img className="" src={item.image.image_1} alt={item.product} />
               <div className="me-auto">
@@ -53,7 +54,7 @@ function CarritoCompra(props) {
             </stack>
             
           ))}
-          {carItems.length !== 0 && (
+          {cartItems.length !== 0 && (
             <aside>
               <div className="row">
                 <div className="col-2">Items Price</div>
@@ -73,7 +74,7 @@ function CarritoCompra(props) {
               </div>
               <hr />
               <div className="row">
-                <button onClick={() => alert('Implement Checout')}>Comprar</button>
+                <button onClick={() => alert('Implement Checkout')}>Comprar</button>
               </div>
             </aside>
           )}
