@@ -1,27 +1,18 @@
 import React from "react";
 import "../../App.css";
 import {Container , Row, Col} from 'react-bootstrap' 
-<<<<<<< HEAD:client/src/pages/DetalleProductoUser.jsx
 import Form from 'react-bootstrap/Form';
-=======
-import Form from 'react-bootstrap/Form'
-import Navbar from '../../components/Navbar';
-import Footer from "../../components/Footer";
-
->>>>>>> 3f7343b83f4eef8f01961136f93c1b205e256c08:client/src/pages/tienda/DetalleProductoUser.jsx
 import { useEffect, useState } from 'react';
-
-//const product = { id:1, image: {image_1:"https://i.imgur.com/9NZV57d.jpg", image_2: "https://i.imgur.com/KucgSMo.jpg", image_3: "https://i.imgur.com/DfzcDIV.jpg" }, product_name: "Tassa de ceràmica Al pas i amb calma", product_description: "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", product_price: "12"};
-const product = { id:1, image: "https://i.imgur.com/9NZV57d.jpg", product_name: "Tassa de ceràmica Al pas i amb calma", product_description: "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", product_price: "12"};
+import storeItems from "../../data/products.json"
 
 
-function DetalleProductoUser() {
-  const [data, setData] = useState({});
+function DetalleProductoUser(props, id) {
+  const [data, setData] = useState({id});
 
   useEffect(() => {
     const getData = new Promise(resolve => {
       setTimeout (() => {
-        resolve(product);
+        resolve(storeItems);
       }, 1000)
     });
     getData.then(res => setData(res))
