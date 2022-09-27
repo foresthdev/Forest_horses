@@ -1,23 +1,25 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-
 import storeItems from "../../data/products.json";
 //import StoreItem from "../components/StoreItem";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../../context/ShoppingCartContex"
+
 //import axios from 'axios';
 
 
 
 export default function Cataleg() {
   const [ items, setItems ] = useState([]);
- 
+  const { 
+    getItemQuantity,
+    increaseCartItems
+  } = useShoppingCart()
+  const quantity = getItemQuantity()
 
-  
- 
   useEffect(() =>{
-
     const getItems = new Promise(resolve => {
       setTimeout (() => {
         resolve(storeItems);
@@ -31,7 +33,7 @@ export default function Cataleg() {
     // .then( res => setGetItems(res.data.getAllItems))
 
       }, []);
-  
+      
     return (
       <div className="cataleg">
         
@@ -52,7 +54,7 @@ export default function Cataleg() {
                     <Card.Img className='' variant="top" src={item.image.image_1} alt={item.product} />
                     <Card.Body>
                       <Link to={`/detalle/${item.id}`}><button>Mas detalle</button></Link>
-                      <button>Afegir al cistell</button>
+                      <button onClick={() => increaseCartItems(id)}>Afegir al cistell</button>
                       <div className="card_text">
                       <Col>
                         <div>{item.product}</div>

@@ -4,10 +4,13 @@ import logotype from "../assets/logo_horizontal.png";
 import perfil from "../assets/perfil.png";
 import cart from "../assets/navcart.png";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../context/ShoppingCartContex";
+
 
 // anchor del logo a pagina principal wix
 
-function Encabezado() {
+function Encabezado() { 
+  const cartQuantity = useShoppingCart
   return (
     <div className="Navbar">
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -77,6 +80,7 @@ function Encabezado() {
                     style={{ width: "2em" }}
                   />
                 </Link>
+                {cartQuantity}
               </Navbar.Brand>
             </Nav>
           </Navbar.Collapse>

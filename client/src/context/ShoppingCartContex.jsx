@@ -12,6 +12,9 @@ export function ShoppingCartProvider({ children }) {
     //los providers necesitan children y objetos dentro de ellos
     //almacenamos la info de las funciones en el useState
     const [cartItems, setCartItems] = useState([])
+    const cartQuantity = cartItems.reduce(
+        (quantity, item) => item.quantity + quantity, 0
+    )
 
     //funcion consigue la cantidad de productos por cantidad
     function getItemQuantity(id) {
@@ -61,7 +64,14 @@ export function ShoppingCartProvider({ children }) {
         })
     }
     return (
-        <ShoppingCartContex.Provider value={{ getItemQuantity, increaseCartItems, decreaseCartItems, removeFromCart }}>
+        <ShoppingCartContex.Provider value={{ 
+            getItemQuantity, 
+            increaseCartItems, 
+            decreaseCartItems, 
+            removeFromCart, 
+            cartItems,
+            cartQuantity
+             }}>
             {children}
         </ShoppingCartContex.Provider>
     )
