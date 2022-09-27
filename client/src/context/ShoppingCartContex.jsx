@@ -36,8 +36,25 @@ export function ShoppingCartProvider({ children }) {
             }
         })
     }
+
+    //funcion menguar
+    function decreaseCartItems(id) { 
+        setCartItems(currentItems => {
+            if (currentItems.find(item => item.id === id)?.quantity === 1) { //encuentra los items actuales y si hay uno 
+                return currentItems.filter(item => item.id !== id) //devuelve el filtro de los articulos cuando el item no es igual al item entonces se elimina
+            } else {
+                return currentItems.map(item => { // mapea los artículos
+                    if (item.id === id) {//si hay el artículo
+                        return { ...item, quantity: item.quantity -1 }// mengua por 1 el artículo
+                    } else {
+                        return item // si no dejalo igual
+                    }
+                })
+            }
+        })
+    }
     return (
-        <ShoppingCartContex.Provider value={{ getItemQuantity, increaseCartItems }}>
+        <ShoppingCartContex.Provider value={{ getItemQuantity, increaseCartItems, decreaseCartItems }}>
             {children}
         </ShoppingCartContex.Provider>
     )
