@@ -10,23 +10,24 @@ import { Link } from "react-router-dom";
 
 
 
-export default function Cataleg() {
+export default function Cataleg(props) {
   const [ items, setItems ] = useState([]);
-  const [cartItems, setCartItems ] = useState([]);
+  const { cartItems, setCartItems, onAdd } = props;
+  // const [cartItems, setCartItems ] = useState([]);
   
-  const onAdd =(item) => {
-    const existItem = cartItems.find(product => product.id === item.id); //encuentra el producto que coincida 
-    if (existItem) {// si existe
-      setCartItems (
-        cartItems.map((product) =>//mapea los productos del cartItems
-        product.id === item.id ? {...existItem, quantity: existItem.quantity +1 }:product //añade 1
-        )
-      );
+  // const onAdd =(item) => {
+  //   const existItem = cartItems.find(product => product.id === item.id); //encuentra el producto que coincida 
+  //   if (existItem) {// si existe
+  //     setCartItems (
+  //       cartItems.map((product) =>//mapea los productos del cartItems
+  //       product.id === item.id ? {...existItem, quantity: existItem.quantity +1 }:product //añade 1
+  //       )
+  //     );
       
-    } else {
-      setCartItems([...cartItems, {...item, quantity: 1}]);// de otra manera pon 1
-    }
-  };
+  //   } else {
+  //     setCartItems([...cartItems, {...item, quantity: 1}]);// de otra manera pon 1
+  //   }
+  // };
 
   
  
@@ -66,7 +67,7 @@ export default function Cataleg() {
                     <Card.Img className='' variant="top" src={item.image.image_1} alt={item.product} />
                     <Card.Body>
                       <Link to={`/detalle/${item.id}`}><button>Mas detalle</button></Link>
-                      <button onClick={onAdd}>Afegir al cistell</button>
+                      <button onClick={() => onAdd(item)}>Afegir al cistell</button>
                       <div className="card_text">
                       <Col>
                         <div>{item.product}</div>
