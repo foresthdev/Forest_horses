@@ -16,6 +16,12 @@ export class ProductsService {
     return await this.productRepository.find(request.query);
   }
 
+  async findOne(idProduct: number): Promise<Product> {
+    return this.productRepository.findOne({
+      where: { id: idProduct },
+    });
+  }
+
   async createProduct(newProduct: CreateProductDto): Promise<Product> {
     const nuevo = new Product();
     nuevo.name = newProduct.name;

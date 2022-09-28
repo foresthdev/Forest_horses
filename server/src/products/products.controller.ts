@@ -34,6 +34,12 @@ export class ProductsController {
     return this.productsService.getAll(request);
   }
 
+  @Get(':id')
+  async findOne(@Res() res, @Param('id') productId) {
+    const product = await this.productsService.findOne(productId);
+    return res.status(HttpStatus.OK).json(product);
+  }
+
   @Put(':id')
   update(
     @Body() updateProductDto: CreateProductDto,
