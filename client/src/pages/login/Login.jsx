@@ -49,7 +49,7 @@ export default function Login(props) {
                 className="button"
                 style={{ background: "#173A3A", border: "#173A3A" }}
               >
-                Enviar
+                Desar
               </Button>
             </div>
             <p className="text-center mt-2">
@@ -109,7 +109,7 @@ export default function Login(props) {
                 className="button"
                 style={{ background: "#173A3A", border: "#173A3A" }}
               >
-                Enviar
+                Desar
               </Button>
             </div>
             <p className="text-center mt-2">
