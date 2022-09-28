@@ -34,7 +34,7 @@ export default function Misdatos() {
           <input className="input" type="text" name="correu" />
         </div>
         <div className="form">
-          <label>Contrasenya</label>
+          <label>Adreça de lliurament</label>
           <input className="input" type="text" name="contrasenya" />
         </div>
         <div className="form">
@@ -42,12 +42,20 @@ export default function Misdatos() {
           <input className="input" type="text" name="teléfono" />
         </div>
         <div className="form">
-          <label>Direcció d'entrega</label>
+          <label>Ciutat</label>
+          <input className="input" type="text" name="dirección" />
+        </div>
+        <div className="form">
+          <label>Província</label>
+          <input className="input" type="text" name="dirección" />
+        </div>
+        <div className="form">
+          <label>Pais</label>
           <input className="input" type="text" name="dirección" />
         </div>
 
         <div>
-          <Button className= "boton1" style= {{background:"#173A3A", border: "#173A3A"}} >Modificar</Button>
+          
           <Button className="boton2" style= {{background:"#173A3A", border: "#173A3A" }}>Desar</Button>
         </div>
       </main>
