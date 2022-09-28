@@ -2,13 +2,14 @@ import { Body, Controller, Post, UseGuards, Request } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { AuthService } from './auth.service';
 import { User } from '../user.entity';
+import { CreateUserDTO } from '../dtos/create-user-dto';
 
 @Controller('auth')
 export class AuthController {
   constructor(private usersService: AuthService) {}
 
   @Post('signup')
-  async signup(@Body() user: User): Promise<User> {
+  async signup(@Body() user: CreateUserDTO): Promise<User> {// CreateUserDTO usurio minmo
     return this.usersService.signup(user);
   }
 

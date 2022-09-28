@@ -1,6 +1,7 @@
-export class CreateUserDTO {
-  username: string;
+export interface CreateUserDTO {
+  // recoge datos del registro
+  fullname: string;
   email: string;
   password: string;
-  roles: string[];
+  //roles: string[];
 }

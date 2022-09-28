@@ -21,10 +21,15 @@ export class UsersService {
     return this.usersRepository.findOneBy({ id });
   }
 
-  async addUser(createUserDTO): Promise<User> {
-    const newUser = await this.usersRepository.create(createUserDTO);
-    newUser.password = await bcrypt.hash(newUser.password, 10);
-    return newUser.save();
+  // async addUser(user: CreateUserDTO): Promise<User> {
+  //   const newUser = new User();
+  //   newUser.email
+  //   newUser.password = await bcrypt.hash(newUser.password, 10);
+  //   return this.usersRepository.save(newUser);
+  // }
+
+  appdate(user: UserDTO){// metodo que actualiza las dades con un findOne
+
   }
 
   async remove(id: string): Promise<void> {

@@ -5,15 +5,18 @@ import {
   //JoinColumn,
   //OneToMany,
   PrimaryGeneratedColumn,
+  Unique,
 } from 'typeorm';
+
+import { IsEmail } from 'class-validator'; //valida el email
 
 @Entity('Users') //table name
 export class User {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn() //@ decorador funcion lo siguiente se tansforma en columnas con atributos
   id: number;
 
   @Column()
-  username: string;
+  fullName: string;
 
   @Column()
   firstName: string;
@@ -23,6 +26,10 @@ export class User {
 
   @Column()
   address: string;
+
+  @Column({ unique: true }) //unico y validado que tenga un formato email
+  @IsEmail()
+  email: string;
 
   @Column()
   password: string;
