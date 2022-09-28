@@ -59,7 +59,7 @@ export default function Cataleg() {
         <main className="">
             <h1>Articles</h1>
             <section className="g-4">
-              <Row md={2} xs={1} lg={4} className="cataleg_grid">
+              <Row md={2} xs={1} lg={3} className="cataleg_grid">
                 {items.map(item => (
                   <Col key={item.id}>
                     <Card>
