@@ -49,6 +49,13 @@ function Encabezado() {
                 >
                   Apadrina
                 </Link>
+              </Nav.Link><Nav.Link>
+                <Link
+                  to="donacions"
+                  style={{ textDecoration: "none", color: "#4A4A4B" }}
+                >
+                  Donacions
+                </Link>
               </Nav.Link>
               <img
                 className="perfil"
