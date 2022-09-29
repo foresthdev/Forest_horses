@@ -64,15 +64,15 @@ function Encabezado() {
                 style={{ width: "2em", height: "2em" }}
               />
               <NavDropdown title="" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
-                  El meu prefil
+                <NavDropdown.Item >
+                  <Link to="lesmevesdades">El meu prefil</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
                   Historial
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
-                  Tancar sessió
+                  <Link to="login">Tancar sessió</Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <Navbar.Brand className="NvBrand">
