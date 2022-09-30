@@ -2,6 +2,7 @@ import React from "react";
 import "../../App.css";
 import Header from "../../components/Header";
 import CatalegHome from "../../components/CatalegHome";
+import {Link} from "react-router-dom"
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
         <CatalegHome />
         <div className="section3-grid">
           <section className="apadrina">
-            <h2>Apadrina una hectàrea</h2>
+            <Link to="apadrina"><h2>Apadrina una hectàrea</h2></Link>
           </section>
           <section className="img-grid">
             <img
@@ -21,7 +22,7 @@ function Home() {
             />
           </section>
           <section className="donacio">
-            <h2>Donació</h2>
+          <Link to="donacio"><h2>Apadrina una hectàrea</h2></Link>
           </section>
         </div>
       </main>
