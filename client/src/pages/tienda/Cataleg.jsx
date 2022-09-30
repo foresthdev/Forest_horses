@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function Cataleg(props) {
   const [ items, setItems ] = useState([]);
-  const { cartItems, setCartItems, onAdd } = props;
+  const { onAdd } = props;
   // const [cartItems, setCartItems ] = useState([]);
   
   // const onAdd =(item) => {

@@ -34,7 +34,7 @@ function CarritoCompra(props) {
 
       <main>
           {/*cuando cartItems este vacio dará el mensage de "La Cistella esta Buida si no renderizará la lista del carrito" */}
-          <div>{cartItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
+          <div className="cistella-buida">{cartItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
           {cartItems.map((item) => (
             <stack  direction="horizontal" gap={2} className="d-frex align-items-center" key={item.id}>
               <img className="" src={item.image.image_1} alt={item.product} />
