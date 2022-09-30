@@ -3,6 +3,7 @@ import {useRoutes} from 'react-router-dom'
 import Home from './pages/Nav/Home';
 import Apadrina from './pages/Nav/Apadrina';
 import Contacte from './pages/Footer/Contacte';
+import Donacions from './pages/Nav/Donacions';
 import Enviament from './pages/Footer/Enviament';
 import Pagament from './pages/Footer/Pagament'
 import DetalleProducto from './pages/tienda/DetalleProductoUser';
@@ -22,6 +23,10 @@ export default function Routes() {
         {
             element: <Enviament />,
             path: 'enviament'
+        },
+        {
+            element: <Donacions />,
+            path: 'donacions'
         },
         {
             element: <Pagament />,
