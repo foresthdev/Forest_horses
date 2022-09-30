@@ -26,7 +26,15 @@ function Encabezado() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
-            <Nav.Link><Link to="/" style={{textDecoration: "none", color: "#4A4A4B"}}>Botiga Solidària</Link></Nav.Link>
+              <Nav.Link>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "#4A4A4B" }}
+                >
+                  Botiga Solidària
+                </Link>
+              </Nav.Link>
+
               <Nav.Link
                 href="https://foresthorses.wixsite.com/foresthorses/l-associaci%C3%B3"
                 target="_blank"
@@ -50,6 +58,14 @@ function Encabezado() {
                   Apadrina
                 </Link>
               </Nav.Link><Nav.Link>
+                <Link
+                  to="donacions"
+                  style={{ textDecoration: "none", color: "#4A4A4B" }}
+                >
+                  Donacions
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
                 <Link
                   to="donacions"
                   style={{ textDecoration: "none", color: "#4A4A4B" }}
