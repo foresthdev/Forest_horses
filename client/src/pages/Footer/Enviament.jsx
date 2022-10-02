@@ -8,12 +8,12 @@ export default function Enviament() {
         <div className="header-title">
           {" "}
           {/*background image con parallax*/}
-          <h1>Apadrina</h1>
+          
         </div>
       </header>
       <main>
         <h1>MÈTODES D'ENVIAMENT</h1>
-        <h6>Quina empresa realizarà l'enviament?</h6>
+        <h6>Quina empresa realitzarà l'enviament?</h6>
 
         <h6>Com es fa l'entrega?</h6>
 
