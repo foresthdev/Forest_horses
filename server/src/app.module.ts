@@ -7,12 +7,6 @@ import { Product } from './products/entities/product.entity';
 import { ProductsService } from './products/products.service';
 
 @Module({
-<<<<<<< HEAD
-  imports: [],
-
-  controllers: [AppController],
-  providers: [AppService],
-=======
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
@@ -28,6 +22,5 @@ import { ProductsService } from './products/products.service';
   ],
   controllers: [AppController, ProductsController],
   providers: [AppService, ProductsService],
->>>>>>> 8730b905b4fb02e49fbd3818f9435f55e5f97acc
 })
 export class AppModule {}
