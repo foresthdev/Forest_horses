@@ -3,26 +3,27 @@ import "../../App.css";
 import {Container , Row, Col} from 'react-bootstrap' 
 import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
-import storeItems from "../../data/products.json"
 import { useParams } from "react-router-dom"
-import axios from "axios"
+import axios from "axios";
 
 
-function DetalleProductoUser(props) {
+function DetalleProductoUser() {
   const { id } =useParams();
-  const [data, setData] = useState({id});
-  const [onAdd ] = props;
+  const [data, setData] = useState([id]);
+  //const [onAdd ] = props;
   
 
   useEffect(() => {
-    const getData = axios.get(resolve => {
-      setTimeout (() => {
-        resolve(storeItems);
-      }, 1000)
-    });
-    getData.then(res => setData(res))
+    const getData = axios.get("../../data/products.json");
+    getData
+    .then((response) => {
+      console.log(response);
+      setData(response.data[0]);
+    })
     .catch((error) => {
-      console.log(error);
+      console.log(error.response.data);  
+      console.log(error.response.status);  
+      console.log(error.response.headers);
     });
   }, []);
 
@@ -55,7 +56,7 @@ function DetalleProductoUser(props) {
             </Row>
           </Container> */}
 
-<Container className="detail_image_container">
+<Container className="detail_image_container" >
             <Row className="up_detail_image_row">
               <Col>
                 <img className="prime_detail_image" src={data.image} alt="" />
@@ -75,7 +76,7 @@ function DetalleProductoUser(props) {
           </Container>
 
             
-            <div detail_text>
+            <div detail_text="true">
               <p>Producte:</p>
               <p>{data.product}</p>
               <p>Nom del producte:</p>
@@ -91,7 +92,7 @@ function DetalleProductoUser(props) {
                   <Form.Control className="input_quantitat" type="number" placeholder="1" />
                 </Col>
               </Row>
-              <button onClick={onAdd}>Afegir al cistell</button>
+              {/* <button onClick={onAdd}>Afegir al cistell</button> */}
             </div>
         </main>
 
