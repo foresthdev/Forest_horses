@@ -4,19 +4,27 @@ import {Container , Row, Col} from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
 import storeItems from "../../data/products.json"
+import { useParams } from "react-router-dom"
+import axios from "axios"
 
 
-function DetalleProductoUser(props, id) {
+function DetalleProductoUser(props) {
+  const { id } =useParams();
   const [data, setData] = useState({id});
+  const [onAdd ] = props;
+  
 
   useEffect(() => {
-    const getData = new Promise(resolve => {
+    const getData = axios.get(resolve => {
       setTimeout (() => {
         resolve(storeItems);
       }, 1000)
     });
     getData.then(res => setData(res))
-  }, [])
+    .catch((error) => {
+      console.log(error);
+    });
+  }, []);
 
   return (
     <div className="DetalleProductoUser">
@@ -83,7 +91,7 @@ function DetalleProductoUser(props, id) {
                   <Form.Control className="input_quantitat" type="number" placeholder="1" />
                 </Col>
               </Row>
-              <button>Afegir al cistell</button>
+              <button onClick={onAdd}>Afegir al cistell</button>
             </div>
         </main>
 
