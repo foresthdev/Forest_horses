@@ -6,45 +6,40 @@ import storeItems from "../../data/products.json";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-//import axios from 'axios';
+import axios from 'axios';
 
 
 
 export default function Cataleg(props) {
   const [ items, setItems ] = useState([]);
-  const { onAdd } = props;
-  // const [cartItems, setCartItems ] = useState([]);
+  const [cartItems, setCartItems ] = useState([]);
   
-  // const onAdd =(item) => {
-  //   const existItem = cartItems.find(product => product.id === item.id); //encuentra el producto que coincida 
-  //   if (existItem) {// si existe
-  //     setCartItems (
-  //       cartItems.map((product) =>//mapea los productos del cartItems
-  //       product.id === item.id ? {...existItem, quantity: existItem.quantity +1 }:product //añade 1
-  //       )
-  //     );
+  const onAdd =(item) => {
+    const existItem = cartItems.find(product => product.id === item.id); //encuentra el producto que coincida 
+    if (existItem) {// si existe
+      setCartItems (
+        cartItems.map((product) =>//mapea los productos del cartItems
+        product.id === item.id ? {...existItem, quantity: existItem.quantity +1 }:product //añade 1
+        )
+      );
       
-  //   } else {
-  //     setCartItems([...cartItems, {...item, quantity: 1}]);// de otra manera pon 1
-  //   }
-  // };
+    } else {
+      setCartItems([...cartItems, {...item, quantity: 1}]);// de otra manera pon 1
+    }
+  };
 
   
  
   useEffect(() =>{
 
-    const getItems = new Promise(resolve => {
+    const getItems = axios.get(resolve => {
       setTimeout (() => {
         resolve(storeItems);
       }, 1000)
     });
-    getItems.then(res => setItems(res))
-
-    // axios.get({
-    //   storeItems
-    // })
-    // .then( res => setGetItems(res.data.getAllItems))
-
+    getItems
+    .then(res => setItems(res.data.getAllItems))
+    .catch(error => console.error(error))
       }, []);
   
     return (
