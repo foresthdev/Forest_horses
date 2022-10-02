@@ -4,6 +4,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { User } from './users/user.entity';
 import { AuthModule } from './users/auth/auth.module';
+import { ProductsController } from './products/products.controller';
+import { Product } from './products/entities/product.entity';
+import { ProductsService } from './products/products.service';
 
 @Module({
   imports: [
@@ -14,13 +17,14 @@ import { AuthModule } from './users/auth/auth.module';
       username: 'nest',
       password: 'app',
       database: 'forest_horses',
-      entities: [User],
+      entities: [Product, User],
       synchronize: true, //shouldn't be used in production - otherwise you can lose production data.
     }),
     AuthModule,
+    TypeOrmModule.forFeature([Product]),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, ProductsController],
+  providers: [AppService, ProductsService],
 })
 export class AppModule {}
 
