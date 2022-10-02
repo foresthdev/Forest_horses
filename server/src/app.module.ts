@@ -5,6 +5,8 @@ import { ProductsController } from './products/products.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Product } from './products/entities/product.entity';
 import { ProductsService } from './products/products.service';
+import { CartModule } from './cart/cart.module';
+import { CartModule } from './cart/cart.module';
 
 @Module({
   imports: [
@@ -19,6 +21,7 @@ import { ProductsService } from './products/products.service';
       synchronize: true,
     }),
     TypeOrmModule.forFeature([Product]),
+    CartModule,
   ],
   controllers: [AppController, ProductsController],
   providers: [AppService, ProductsService],
