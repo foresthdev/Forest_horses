@@ -15,6 +15,7 @@ function DetalleProductoUser() {
 
   useEffect(() => {
     const getData = axios.get("../../data/products.json");
+    //const getData = axios.get(`http://localhost:3000/detalle/${id}`);
     getData
     .then((response) => {
       console.log(response);
