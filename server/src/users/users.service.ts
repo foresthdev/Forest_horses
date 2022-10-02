@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './user.entity';
-import { CreateUserDTO } from './dtos/create-user-dto';
-import * as bcrypt from 'bcrypt';
+import { UserDTO } from './dtos/user-dto';
+//import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
@@ -28,8 +28,16 @@ export class UsersService {
   //   return this.usersRepository.save(newUser);
   // }
 
-  appdate(user: UserDTO){// metodo que actualiza las dades con un findOne
+  async update(id: number, user: UserDTO): Promise<any> {
+    // metodo que actualiza las dades
+    const updateUser = await this.usersRepository.findOneBy({ id });
+    updateUser.address = user.address;
+    updateUser.city = user.city;
+    updateUser.provincia = user.provincia;
+    updateUser.country = user.country;
+    updateUser.phone = user.phone;
 
+    return await this.usersRepository.save(updateUser);
   }
 
   async remove(id: string): Promise<void> {

@@ -9,7 +9,8 @@ export class AuthController {
   constructor(private usersService: AuthService) {}
 
   @Post('signup')
-  async signup(@Body() user: CreateUserDTO): Promise<User> {// CreateUserDTO usurio minmo
+  async signup(@Body() user: CreateUserDTO): Promise<User> {
+    // CreateUserDTO usurio minmo
     return this.usersService.signup(user);
   }
 

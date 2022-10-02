@@ -1,12 +1,17 @@
-import { Body, Controller, Put } from '@nestjs/common';
+import { Body, Controller, Put, Param } from '@nestjs/common';
 import { UserDTO } from './dtos/user-dto';
-import { User } from './user.entity';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
-  @Put('mevesdades') // Hay info previa y se añade info
-  async update(@Body() user: UserDTO): Promise<User> {
-    // CreateUserDTO usurio minmo
-    return this.usersService.update(user);
+  constructor(private readonly usersService: UsersService) {}
+
+  @Put('user') // Hay info previa y se añade info
+  async update(
+    @Param('id') id: number,
+    @Body() updateUser: UserDTO,
+  ): Promise<any> {
+    // UserDTO usurio minmo
+    return this.usersService.update(id, updateUser);
   }
 }

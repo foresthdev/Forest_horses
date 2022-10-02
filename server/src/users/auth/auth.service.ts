@@ -1,4 +1,4 @@
-import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -25,8 +25,8 @@ export class AuthService {
   }
 
   // method to validate the users’ details
-  async validateUser(username: string, password: string): Promise<any> {
-    const foundUser = await this.userRepository.findOneBy({ username });
+  async validateUser(fullName: string, password: string): Promise<any> {
+    const foundUser = await this.userRepository.findOneBy({ fullName });
     if (foundUser) {
       if (await bcrypt.compare(password, foundUser.password)) {
         const { password, ...result } = foundUser;

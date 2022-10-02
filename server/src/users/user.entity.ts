@@ -5,7 +5,6 @@ import {
   //JoinColumn,
   //OneToMany,
   PrimaryGeneratedColumn,
-  Unique,
 } from 'typeorm';
 
 import { IsEmail } from 'class-validator'; //valida el email
@@ -26,6 +25,18 @@ export class User {
 
   @Column()
   address: string;
+
+  @Column()
+  phone: string;
+
+  @Column()
+  city: string;
+
+  @Column()
+  provincia: string;
+
+  @Column()
+  country: string;
 
   @Column({ unique: true }) //unico y validado que tenga un formato email
   @IsEmail()
