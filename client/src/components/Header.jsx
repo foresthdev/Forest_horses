@@ -4,7 +4,7 @@ import {Container, Col, Row } from 'react-bootstrap';
 
 function Header() {
   return (
-    <div className="Header">
+    <div className="Header" >
       <Container fluid>
         <div className="header-title">
           {" "}

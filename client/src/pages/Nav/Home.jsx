@@ -18,7 +18,7 @@ function Home() {
                 <h2>Apadrina una hectàrea</h2>
               </Link>
               <p className="text-home">Col·labora amb nosaltres.</p>
-              <Button variant="outline-dark">Dark</Button>
+              <Button variant="outline-light">Informa't</Button>
             </section>
             <section className="img-grid">
               <img
@@ -32,7 +32,7 @@ function Home() {
                 <h2>Donacions</h2>
               </Link>
               <p>Col·labora amb nosaltres.</p>
-              <Button variant="outline-dark">Dark</Button>
+              <Button variant="outline-light">Informa't</Button>
             </section>
           </div>
         </main>
