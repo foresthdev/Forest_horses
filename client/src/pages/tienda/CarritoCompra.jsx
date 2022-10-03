@@ -47,7 +47,8 @@ function CarritoCompra(props) {
                 <button onClick={() => onRemove(item)} className="remove">-</button>
               </div>
               <div>
-                {item.qty} x € {item.price.toFixed(2)}
+                {/* precio con 2 decimales */}
+                {item.qty} x € {Number(item.price).toFixed(2)}
               </div>
               <div className="block col-1 text-right">
                 {item.qty} x €{item.price.toFixed}
