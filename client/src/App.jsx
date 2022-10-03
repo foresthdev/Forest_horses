@@ -41,10 +41,10 @@ function App() {
             <Route path="/apadrina" element={<Apadrina/>} />
             <Route path="/donacions" element={<Donacio/>} />
             <Route path="/enviament" element={<Enviament/>} />
-            <Route path="/detalle/:id" element={<DetalleProducto/>} cartItems={cartItems} onAdd={onAdd} />
+            <Route path="/detalle/:id" element={<DetalleProducto authed={true} />} cartItems={cartItems} onAdd={onAdd} />
             <Route path="/pagament" element={<Pagament/>} />
-            <Route path="/cataleg" element={<Cataleg/>} cartItems={cartItems} onAdd={onAdd} />
-            <Route path="/carrito" element={<Carrito/>} cartItems={cartItems} onAdd={onAdd} />
+            <Route path="/cataleg" element={<Cataleg authed={true} />} cartItems={cartItems} onAdd={onAdd} />
+            <Route path="/carrito" element={<Carrito authed={true} />} cartItems={cartItems} onAdd={onAdd} />
             <Route path="/login" element={<Login/>} />
             <Route path="/lesmevesdades" element={<Mevesdades/>} />
             <Route path="/" exact element={<Home/>} />

@@ -5,121 +5,102 @@ import storeItems from "../../data/products.json";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
-
-
+//import axios from 'axios';
 
 export default function Cataleg(props) {
-  const [ items, setItems ] = useState([]);
-  const [cartItems, setCartItems ] = useState([]);
-  
-  const onAdd =(item) => {
-    const existItem = cartItems.find(product => product.id === item.id); //encuentra el producto que coincida 
-    if (existItem) {// si existe
-      setCartItems (
-        cartItems.map((product) =>//mapea los productos del cartItems
-        product.id === item.id ? {...existItem, quantity: existItem.quantity +1 }:product //añade 1
-        )
-      );
-      
-    } else {
-      setCartItems([...cartItems, {...item, quantity: 1}]);// de otra manera pon 1
-    }
-  };
+  const [items, setItems] = useState([]);
+  // const [cartItems, setCartItems] = useState([]);
+  const { onAdd } = props;
 
-  
- 
-  useEffect(() =>{
-
-    const getItems = axios.get(resolve => {
-      setTimeout (() => {
+  useEffect(() => {
+    const getItems = new Promise((resolve) => {
+      setTimeout(() => {
         resolve(storeItems);
-      }, 1000)
+      }, 1000);
     });
-    getItems
-    .then(res => setItems(res.data.getAllItems))
-    .catch(error => console.error(error))
-      }, []);
-  
-    return (
-      <div className="cataleg">
-        
-        <header className="Header">
-        <div className="header-title" > {/*background image con parallax*/}
-            <h1>Catàleg</h1>
-        </div>
-   
-        </header>
+    getItems.then((res) => setItems(res));
+  }, []);
 
-        <main className="">
-            <h1>Articles</h1>
-            <section className="g-4">
-              <Row md={2} xs={1} lg={3} className="cataleg_grid">
-                {items.map(item => (
-                  <Col key={item.id}>
-                    <Card>
-                    <Card.Img className='' variant="top" src={item.image.image_1} alt={item.product} />
-                    <Card.Body>
-                      <Link to={`/detalle/${item.id}`}><button>Mas detalle</button></Link>
-                      <button onClick={() => onAdd(item)}>Afegir al cistell</button>
-                      <div className="card_text">
+  return (
+    <div className="cataleg">
+      <header className="Header">
+        <div className="header-title">
+          {" "}
+          {/*background image con parallax*/}
+          <h1>Catàleg</h1>
+        </div>
+      </header>
+
+      <main className="">
+        <h1>Articles</h1>
+        <section className="g-4">
+          <Row md={2} xs={1} lg={3} className="cataleg_grid">
+            {items.map((item) => (
+              <Col key={item.id}>
+                <Card>
+                  <Card.Img
+                    className=""
+                    variant="top"
+                    src={item.image.image_1}
+                    alt={item.product}
+                  />
+                  <Card.Body>
+                    <Link to={`/detalle/${item.id}`}>
+                      <button>Mes detall</button>
+                    </Link>
+                    <button onClick={() => onAdd(item)}>
+                      Afegir al cistell
+                    </button>
+                    <div className="card_text">
                       <Col>
                         <div>{item.product}</div>
                       </Col>
                       <Col>
                         <div>€{item.price}</div>
                       </Col>
-                      </div>
-                    </Card.Body>
-                    </Card>
-                    
-                  </Col>
-                ))}
-              </Row>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </section>
+      </main>
+    </div>
+  );
+}
+//typscript
+// import React from "react";
+// import { Col, Row } from "react-bootstrap";
+// import storeItems from "../data/products.json";
+// import StoreItem from "../components/StoreItem";
 
-            </section>
-            
-        </main>
+// export default function Cataleg() {
+//     return (
+//       <div className="cataleg">
 
-        
-      </div>
-    );
-  }
-  //typscript
-  // import React from "react";
-  // import { Col, Row } from "react-bootstrap";
-  // import storeItems from "../data/products.json";
-  // import StoreItem from "../components/StoreItem";
-  
-  // export default function Cataleg() {
-  //     return (
-  //       <div className="cataleg">
-          
-  //         <header className="Header">
-  //         <div className="header-title" > {/*background image con parallax*/}
-  //             <h1>Catàleg</h1>
-  //         </div>
-     
-  //         </header>
-  
-  //         <main className="">
-  //             <h1>Articles</h1>
-  //             <section className="g-4">
-  //               <Row md={2} xs={1} lg={4} className="cataleg_grid">
-  //                 {storeItems.map(item => (
-  //                   <Col key={item.id}>
-  //                     <StoreItem {...item} />
-  //                   </Col>
-  //                 ))}
-  //               </Row>
-  
-  //             </section>
-              
-  //         </main>
-  
-          
-  //       </div>
-  //     );
-  //   }
+//         <header className="Header">
+//         <div className="header-title" > {/*background image con parallax*/}
+//             <h1>Catàleg</h1>
+//         </div>
 
-  
+//         </header>
+
+//         <main className="">
+//             <h1>Articles</h1>
+//             <section className="g-4">
+//               <Row md={2} xs={1} lg={4} className="cataleg_grid">
+//                 {storeItems.map(item => (
+//                   <Col key={item.id}>
+//                     <StoreItem {...item} />
+//                   </Col>
+//                 ))}
+//               </Row>
+
+//             </section>
+
+//         </main>
+
+//       </div>
+//     );
+//   }
