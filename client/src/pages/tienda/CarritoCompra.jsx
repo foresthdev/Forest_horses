@@ -37,7 +37,7 @@ function CarritoCompra(props) {
           <div className="cistella-buida">{cartItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
           {cartItems.map((item) => (
             <stack  direction="horizontal" gap={2} className="d-frex align-items-center" key={item.id}>
-              <img className="" src={item.image.image_1} alt={item.product} />
+              <img className="cistella-image" src={item.image.image_1} alt={item.product} />
               <div className="me-auto">
                 {item.product}
               </div>

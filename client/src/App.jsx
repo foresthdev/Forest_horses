@@ -36,7 +36,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
+        <Navbar countCartItems={cartItems.length} />
         <Routes>
             <Route path="/apadrina" element={<Apadrina/>} />
             <Route path="/donacions" element={<Donacio/>} />
