@@ -20,7 +20,7 @@ function DetalleProductoUser() {
     .then((response) => {
       console.log(response);
       setData(response.data[0]);
-    })
+    })""
     .catch((error) => {
       console.log(error.response.data);  
       console.log(error.response.status);  
