@@ -1,1 +1,0 @@
-// redireccion a associació WIX -- anchor

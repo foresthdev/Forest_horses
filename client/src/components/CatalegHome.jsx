@@ -6,10 +6,9 @@ import { Container, Row, Col } from "react-bootstrap";
 export default function CatalegHome() {
   return (
     <div className="CatalegHome">
-      <Container fluid>
-        <Row>
+      
           <h1 href={cataleg}>Cataleg</h1>
-          <Col>
+          
             <Link to="detalle/1">
               <img
                 src="https://i.imgur.com/gKq7Lay.jpg"
@@ -18,8 +17,7 @@ export default function CatalegHome() {
                 alt="bag1"
               />
             </Link>
-          </Col>
-          <Col>
+          
             <Link to="detalle/2">
               <img
                 src="https://i.imgur.com/KucgSMo.jpg"
@@ -29,8 +27,7 @@ export default function CatalegHome() {
                 alt="cup"
               />
             </Link>
-          </Col>
-          <Col>
+          
             <Link to="detalle/3">
               <img
                 src="https://i.imgur.com/B2guuEe.jpg"
@@ -40,9 +37,7 @@ export default function CatalegHome() {
                 alt="bag2"
               />
             </Link>
-          </Col>
-        </Row>
-      </Container>
+          
     </div>
   );
 }

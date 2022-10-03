@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="footer">
-    <Container fluid>
+    
       <div className="footerFila1">
         <a
           className="telf"
@@ -61,7 +61,7 @@ function Footer() {
           </a>
         </Link>
       </div>
-      </Container>
+      
     </div>
   );
 }

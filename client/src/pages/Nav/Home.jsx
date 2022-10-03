@@ -3,12 +3,11 @@ import "../../App.css";
 import Header from "../../components/Header";
 import CatalegHome from "../../components/CatalegHome";
 import { Link } from "react-router-dom";
-import { Button, Container, Col, Row } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function Home() {
   return (
     <div className="Home">
-      <Container fluid>
         <Header />
         <main>
           <CatalegHome />
@@ -36,7 +35,6 @@ function Home() {
             </section>
           </div>
         </main>
-      </Container>
     </div>
   );
 }

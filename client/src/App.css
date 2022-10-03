@@ -1,5 +1,6 @@
 @import url('http://fonts.cdnfonts.com/css/poppins');
 @import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+@import url(//db.onlinewebfonts.com/c/028b4cfdfab5d1049178e9b1eb42f49e?family=Poppins+SemiBold);
 
 /* ----------------------------------------------------HEADER---------------------------------------------------------------------------- */
 .Header {
@@ -14,6 +15,7 @@
   color: #939745;
   display: inline-flex;
   font-family: "Poppins";
+  font-style: normal;
   font-weight: 700;
   margin: 2em;
 }
@@ -31,7 +33,7 @@
   font-weight: 400;
   text-decoration: none;
 }
-p {
+.text-home {
   margin: 5px;
   font-family: AvenirNextLTW02-Regular;
   font-weight: 400;
