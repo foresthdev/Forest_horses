@@ -6,19 +6,28 @@ import { jwtConstants } from './constants';
 import { JwStrategy } from './jwt-strategy';
 import { PassportModule } from '@nestjs/passport';
 import { LocalStrategy } from './local.strategy';
-import { TypeOrmModule } from '@nestjs/typeorm';
+//import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from '../user.entity';
+import { Repository } from 'typeorm';
+import { UsersService } from '../users.service';
+import { UsersModule } from '../users.module';
 
+//Module in nestjs are built asynchronously. Meaning they have to be structured like a cascading tree with one module importing all the others. Something linear will look like this
 @Module({
-  providers: [AuthService],
+  providers: [AuthService, LocalStrategy, User, UsersService, JwStrategy],
   controllers: [AuthController],
   imports: [
-    PassportModule,
+    UsersModule,
+    Repository,
+    PassportModule.register({
+      defaultStrategy: 'jwt',
+    }),
     JwtModule.register({
       secret: jwtConstants.secret,
       signOptions: { expiresIn: '60m' },
     }),
   ],
+  exports: [AuthService],
 })
 export class AuthModule {}
 

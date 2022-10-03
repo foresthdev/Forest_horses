@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './user.entity';
 import { UserDTO } from './dtos/user-dto';
+import { AuthService } from './auth/auth.service';
 //import * as bcrypt from 'bcrypt';
 
 @Injectable()
@@ -10,6 +11,9 @@ export class UsersService {
   constructor(
     @InjectRepository(User)
     private usersRepository: Repository<User>,
+    //private readonly config: ConfigService,
+    //@Inject(forwardRef(() => AuthService))
+    private readonly authService: AuthService,
   ) {}
 
   findAll(): Promise<User[]> {
