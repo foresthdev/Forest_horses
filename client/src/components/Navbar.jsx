@@ -75,14 +75,14 @@ function Encabezado(props) {
               />
               <NavDropdown title="" id="collasible-nav-dropdown">
                 <NavDropdown.Item >
-                  <Link to="lesmevesdades">El meu prefil</Link>
+                  <Link to="lesmevesdades" style={{ color: "black", textDecoration: "none" }}>El meu prefil</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
                   Historial
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
-                  <Link to="login">Tancar sessió</Link>
+                  <Link to="login" style={{ color: "black", textDecoration: "none" }}>Tancar sessió</Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <Navbar.Brand className="NvBrand">

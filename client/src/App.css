@@ -121,8 +121,49 @@
   flex: 1 100%;
 }
 
+<<<<<<< HEAD
 /* ---------------------------------------------------Cistella--------------------------------------------------------------------------- */
 
 .cistella-image {
   width: 15%;
+=======
+/*----------------- LOGIN----------------------------------------------------------*/
+
+
+.Auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*--------------------------------MEVESDADES-----------------------------------------*/
+
+.dades {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+ 
+}
+
+.input {
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  
+ 
+
+}
+  
+ 
+  
+/*---------------------------------------MENU LATERAL---------------------------------*/  
+
+.MenuLateral {
+  display: flex;
+  flex-direction: column;
+  
+   
+
+>>>>>>> 3d36e2242dc63f3ef5b277ab5bad270314803670
 }

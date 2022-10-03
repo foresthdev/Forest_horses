@@ -11,8 +11,8 @@ function Home() {
       <main>
         <CatalegHome />
         <div className="section3-grid">
-          <section className="apadrina">
-            <Link to="apadrina"><h2>Apadrina una hectàrea</h2></Link>
+          <section className="apadrina" >
+            <Link to="apadrina" style={{textDecoration: "none", color: "#173A3A", fontWeight: "800"}}><h2>Apadrina una hectàrea</h2></Link>
           </section>
           <section className="img-grid">
             <img
@@ -22,7 +22,7 @@ function Home() {
             />
           </section>
           <section className="donacio">
-          <Link to="donacio"><h2>Apadrina una hectàrea</h2></Link>
+          <Link to="donacio" style={{textDecoration: "none", color: "#939745", fontWeight: "800"}} ><h2>Donació</h2></Link>
           </section>
         </div>
       </main>
