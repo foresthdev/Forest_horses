@@ -13,7 +13,8 @@ export default function Donacions() {
       <main>
         <section className="donacions">
           <img
-            src="https://i.imgur.com/lJ6w8qL.png"
+          src="https://i.imgur.com/zjGBlyx.png"
+            
             classname="imgdonacions"
             alt="banner donacions de temps"
           />
@@ -31,7 +32,8 @@ export default function Donacions() {
         </section>
         <section className="donacions">
           <img
-            src="https://i.imgur.com/zCYx1FT.png"
+          src="https://i.imgur.com/lJ6w8qL.png"
+            
             classname="imgdonacions"
             alt="banner donacions de materials"
           />
@@ -50,7 +52,7 @@ export default function Donacions() {
         </section>
         <section className="donacions">
           <img
-            src="https://i.imgur.com/zjGBlyx.png"
+            src="https://i.imgur.com/zCYx1FT.png"
             classname="imgdonacions"
             alt="banner donacions econòmiques"
           />
@@ -64,7 +66,7 @@ export default function Donacions() {
           </p>
           
           <Paypal/>
-          <img src='https://i.imgur.com/Gr2FbNO.png' href='https://sis-t.redsys.es:25443/sis/rest/trataPeticionREST' alt='redirecció a redsys'/>
+         <a  href='https://sis-t.redsys.es:25443/sis/rest/trataPeticionREST'> <img src='https://i.imgur.com/Gr2FbNO.png' alt='redirecció a redsys'/></a>
         </section>
         <p>
           I si en tens d'algún altre tipus i creus que pot servir, no dubtis en
