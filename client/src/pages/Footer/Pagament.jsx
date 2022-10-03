@@ -20,12 +20,6 @@ export default function MetodesPago() {
         </p>
         <h3>PAYPAL</h3>
         <p>
-<<<<<<< HEAD
-          Si escolleix realitzar el pagament mitjançant Paypal, es redirigirà a
-          la plataforma de Paypal per poder completar el pagament. Si no tens un
-          compte de Paypal, pots ser creada durant el procés de compra per poder
-          realitzar la comanda. Serà
-=======
           Paypal és un mètode de pagament en línia gratuït que pots utilitzar
           vagis on vagis. Pots associar la teva targeta de crèdit o dèbit, o el
           teu compte bancari de qualsevol entitat bancària, o moneda virtual que
@@ -34,7 +28,6 @@ export default function MetodesPago() {
           plataforma de Paypal per poder completar el pagament, haurà de seguir
           els passos que t'indiquin. Si no estàs registrat, pots crear un compte
           durant el procés de compra per poder fer la comanda.
->>>>>>> fdf7d0214fe69565028cc835cf53553dc582e7c2
         </p>
         <p>
           El bàner et redirigirà a la pàgina principal per si vols consultar més
@@ -48,18 +41,6 @@ export default function MetodesPago() {
         />
         <h3>BIZUM</h3>
         <p>
-<<<<<<< HEAD
-          Si escolleix realitzar el pagament mitjançant Bizum, es redirigirà a
-          la plataforma de Bizum per poder completar el pagament, haurà de
-          seguir els passos que li indiquin. Si no es té compte de Bizum, pot
-          ser creada durant el procés de compra per poder realitzar la comanda.
-          Bizum es un servei íntegrament ofert per canals bancaris, pel que està
-          totalment respaldat pels sistemes de seguretat dels bancs. La
-          transferencia sempre la ordena el banc i són ells els que
-          s'encarreguen d'autentificar l'usuari. Serà pot dirigir-se a{" "}
-          <a>aquest enllaç</a> per si té més dubtes per utilitzar aquest servei.
-        </p>
-=======
           Bizum és un servei íntegrament ofert per canals bancaris, per la qual
           cosa, està totalment recolzada pels sistemes de seguretat dels bancs.
           La transferència sempre l'ordena el banc i són ells els que
@@ -104,7 +85,6 @@ export default function MetodesPago() {
           alt="banner Bizum"
           href="https://bizum.es/"
         />
->>>>>>> fdf7d0214fe69565028cc835cf53553dc582e7c2
       </main>
     </div>
   );
