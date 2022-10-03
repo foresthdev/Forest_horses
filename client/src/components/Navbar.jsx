@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Col, Row, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logotype from "../assets/logo_horizontal.png";
 import perfil from "../assets/perfil.png";
 import cart from "../assets/navcart.png";
@@ -11,7 +11,7 @@ function Encabezado() {
   return (
     <div className="Navbar">
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-        <Container>
+        <Container fluid>
           <Navbar.Brand className="NvBrand">
             <Link to="/">
               <img
@@ -73,7 +73,7 @@ function Encabezado() {
                 style={{ width: "2em", height: "2em" }}
               />
               <NavDropdown title="" id="collasible-nav-dropdown">
-                <NavDropdown.Item >
+                <NavDropdown.Item>
                   <Link to="lesmevesdades">El meu prefil</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">

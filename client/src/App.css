@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url(//db.onlinewebfonts.com/c/be9a43357e0fe07642191e4b32995385?family=AvenirNextLTW02-Regular);
-@import url(//db.onlinewebfonts.com/c/250335a106a8ab0517c821001753b335?family=AvenirNextW05-Italic);
+@import url('http://fonts.cdnfonts.com/css/poppins');
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
 
 /* ----------------------------------------------------HEADER---------------------------------------------------------------------------- */
 .Header {
@@ -14,9 +13,9 @@
   padding: 1em;
   color: #939745;
   display: inline-flex;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
+  font-weight: 700;
   margin: 2em;
-  /* falta tipografia tamaño */
 }
 /* mediaqueries */
 @media (max-width: 600px) {
@@ -24,7 +23,22 @@
     background-size: auto;
   }
 }
-/* ---------------------------------------------------HOME--------------------------------------------------------------------------- 
+/* ---------------------------------------------------HOME--------------------------------------------------------------------------- */
+.link {
+  font-family: "Poppins";
+  font-style: normal;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+}
+p {
+  margin: 5px;
+  font-family: AvenirNextLTW02-Regular;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+
+}
 
 /* ----------------------------------------------------FOOTER---------------------------------------------------------------------------- */
 .footer {
@@ -110,10 +124,10 @@
   width: 250px;
 }
 .wrapper {
-  display: flex;  
+  display: flex;
   flex-flow: row wrap;
   font-weight: bold;
-  text-align: center; 
+  text-align: center;
 }
 
 .wrapper > * {
