@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function MetodesPago() {
   return (
     <div>
@@ -78,7 +77,6 @@ export default function MetodesPago() {
           El bàner et redirigirà a la pàgina principal per si vols consultar més
           coses sobre la teva compte.
         </p>
-
         <img
           src="https://i.imgur.com/bXHWU7F.png"
           className="banner-pagaments"

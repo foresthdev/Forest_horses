@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 
 // anchor del logo a pagina principal wix
 
-function Encabezado() {
+function Encabezado(props) {
+  const {countCartItems} = props;
   return (
     <div className="Navbar">
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -92,6 +93,14 @@ function Encabezado() {
                     alt="cart"
                     style={{ width: "2em" }}
                   />
+
+                  { ' ' }
+                  {countCartItems ? (
+                    <button className="badge">{countCartItems}</button>
+                  ) : (
+                    ''
+                  )}
+
                 </Link>
               </Navbar.Brand>
             </Nav>
