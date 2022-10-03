@@ -120,3 +120,43 @@
   padding: 10px;
   flex: 1 100%;
 }
+
+/*----------------- LOGIN----------------------------------------------------------*/
+
+
+.Auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*--------------------------------MEVESDADES-----------------------------------------*/
+
+.dades {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+ 
+}
+
+.input {
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  
+ 
+
+}
+  
+ 
+  
+/*---------------------------------------MENU LATERAL---------------------------------*/  
+
+.MenuLateral {
+  display: flex;
+  flex-direction: column;
+  
+   
+
+}
