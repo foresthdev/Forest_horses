@@ -1,5 +1,6 @@
 import React from "react";
 import Form from 'react-bootstrap/Form'
+import Stack from 'react-bootstrap/Stack';
 
 
 function CarritoCompra(props) {
@@ -35,8 +36,10 @@ function CarritoCompra(props) {
       <main>
           {/*cuando cartItems este vacio dará el mensage de "La Cistella esta Buida si no renderizará la lista del carrito" */}
           <div className="cistella-buida">{cartItems.length === 0 && <div>La Cistella esta Buida</div>}</div>
+          <div className="">
           {cartItems.map((item) => (
-            <stack  direction="horizontal" gap={2} className="d-frex align-items-center" key={item.id}>
+            
+            <Stack  direction="horizontal" gap={4} className="d-frex align-items-right col-md-7" key={item.id}>
               <img className="cistella-image" src={item.image.image_1} alt={item.product} />
               <div className="me-auto">
                 {item.product}
@@ -53,7 +56,7 @@ function CarritoCompra(props) {
               <div className="block col-1 text-right">
                 {item.qty} x €{Number(item.price).toFixed}
               </div>
-            </stack>
+            </Stack>
             
           ))}
           {cartItems.length !== 0 && (
@@ -80,7 +83,7 @@ function CarritoCompra(props) {
               </div>
             </aside>
           )}
-          
+          </div>
       </main>
     
 
