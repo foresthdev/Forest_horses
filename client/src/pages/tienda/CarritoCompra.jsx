@@ -47,11 +47,11 @@ function CarritoCompra(props) {
                 <button onClick={() => onRemove(item)} className="remove">-</button>
               </div>
               <div>
-                {/* precio con 2 decimales */}
+                {/* toFixed no acepta string hay q tranformarlo en Number, (2) precio con 2 decimales */}
                 {item.qty} x € {Number(item.price).toFixed(2)}
               </div>
               <div className="block col-1 text-right">
-                {item.qty} x €{item.price.toFixed}
+                {item.qty} x €{Number(item.price).toFixed}
               </div>
             </stack>
             
@@ -60,19 +60,19 @@ function CarritoCompra(props) {
             <aside>
               <div className="row">
                 <div className="col-2">Items Price</div>
-                <div className="col-1 text-right">€{itemsPrice.toFixed(2)}</div>
+                <div className="col-1 text-right">€{Number(itemsPrice).toFixed(2)}</div>
               </div>
               <div className="row">
                 <div className="col-2">Tax Price</div>
-                <div className="col-1 text-right">€{taxPrice.toFixed(2)}</div>
+                <div className="col-1 text-right">€{Number(taxPrice).toFixed(2)}</div>
               </div>
               <div className="row">
                 <div className="col-2">Shipping Price</div>                                                            
-                <div className="col-1 text-right">€{shippingPrice.toFixed(2)}</div>
+                <div className="col-1 text-right">€{Number(shippingPrice).toFixed(2)}</div>
               </div>
               <div className="row">
                 <div className="col-2">Total Price</div>
-                <div className="col-1 text-right"><strong>€{totalPrice.toFixed(2)}</strong></div>
+                <div className="col-1 text-right"><strong>€{Number(totalPrice).toFixed(2)}</strong></div>
               </div>
               <hr />
               <div className="row">
