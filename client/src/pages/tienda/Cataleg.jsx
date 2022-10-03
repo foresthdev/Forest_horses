@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 
 import storeItems from "../../data/products.json";
-//import StoreItem from "../components/StoreItem";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
