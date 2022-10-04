@@ -1,4 +1,5 @@
 import React from "react";
+import '../../App.css';
 import { Button, Container, Col, Row, Card } from "react-bootstrap";
 import storeItems from "../../data/products.json";
 //import StoreItem from "../components/StoreItem";

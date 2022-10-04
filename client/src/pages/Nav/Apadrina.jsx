@@ -1,4 +1,5 @@
 import React from "react";
+import '../../App.css';
 import Paypal from '../../components/Paypal';
 import { Button} from "react-bootstrap";
 
@@ -32,7 +33,7 @@ export default function Apadrina() {
             part nostra i del Forest: moltes gràcies per formar part de la
             solució!
           </p>
-        < Paypal />
+        <Paypal />
       </main>
     </div>
   );

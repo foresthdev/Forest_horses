@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css';
 import { BsFillTelephoneFill, BsEnvelope, BsInstagram } from "react-icons/bs";
 import { Button, Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";

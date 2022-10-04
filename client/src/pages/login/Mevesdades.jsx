@@ -1,4 +1,4 @@
-// import './App.css';
+import '../../App.css';
 import React from "react";
 import { Button } from "react-bootstrap";
 import MenuLateral from "../../components/MenuLateral";

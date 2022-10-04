@@ -1,5 +1,5 @@
 import React from "react";
-import "../../App.css";
+import '../../App.css';
 import Header from "../../components/Header";
 import CatalegHome from "../../components/CatalegHome";
 import { Link } from "react-router-dom";

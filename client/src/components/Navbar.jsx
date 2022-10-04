@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css';
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import logotype from "../assets/logo_horizontal.png";
 import perfil from "../assets/perfil.png";
