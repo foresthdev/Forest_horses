@@ -7,14 +7,15 @@ https://www.figma.com/file/eRtFOVmWcyBcYks4bdsxPi/Forest_Horse?node-id=0%3A1
 ## ⚙️ Tecnologías utilizadas en el proyecto
 
 <ul>
-        <li>React</li>
+        <li>React Js</li>
         <li>Node Js</li>
         <li>Nest Js</li>
         <li>Jest</li>
+        <li>JavaScript</li>
         <li>TypeScript</li>
         <li>npm</li>
         <li>Bootstrap/React Boostrap</li>
-        <li>PostgreSQL</li>
+        <li>MySQL</li>
 </ul>
 
 ## 🔍 Instalación:
