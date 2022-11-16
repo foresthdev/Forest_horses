@@ -23,28 +23,36 @@ function App() {
   const onAdd =(item) => {
     const existItem = cartItems.find(product => product.id === item.id); //encuentra el producto que coincida 
     if (existItem) {// si existe
+      
       setCartItems (
         cartItems.map((product) =>//mapea los productos del cartItems
+        
         product.id === item.id ? {...existItem, quantity: existItem.quantity +1 }:product //añade 1
         )
       );
       
+      
     } else {
-      setCartItems([...cartItems, {...item, quantity: 1}]);// de otra manera pon 1
-    }
+      console.log("else")
+      setCartItems([...cartItems, {...item, quantity: +1}]);// de otra manera pon 1
+      console.log("else setCArtitems", cartItems)
+    } 
+    console.log("shoppingcart", cartItems)
+    console.log("enter",existItem.quantity)
   };
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar countCartItems={cartItems.length} />
+        <Navbar cartItems={cartItems} />
         <Routes>
             <Route path="/apadrina" element={<Apadrina/>} />
             <Route path="/donacions" element={<Donacio/>} />
             <Route path="/enviament" element={<Enviament/>} />
             <Route path="/detalle/:id" element={<DetalleProducto authed={true} cartItems={cartItems} onAdd={onAdd} />} />
             <Route path="/pagament" element={<Pagament/>} />
-            <Route path="/cataleg" element={<Cataleg authed={true} cartItems={cartItems} onAdd={onAdd} />}  />
-            <Route path="/carrito" element={<Carrito authed={true} cartItems={cartItems} onAdd={onAdd} />}  />
+            <Route path="/cataleg" element={<Cataleg authed={true} onAdd={onAdd} />}  />
+            <Route path="/carrito" element={<Carrito authed={true} cartItems={cartItems}  setCartItems={setCartItems} onAdd={onAdd} />}  />
             <Route path="/login" element={<Login/>} />
             <Route path="/lesmevesdades" element={<Mevesdades/>} />
             <Route path="/" exact element={<Home/>} />
