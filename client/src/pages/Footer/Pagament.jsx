@@ -1,4 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
+import '../../App.css';
+
+=======
+>>>>>>> 9cff4a9ca04965e6fc3d73bd890ef91440cbc979
 export default function MetodesPago() {
   return (
     <div>

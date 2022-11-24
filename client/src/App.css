@@ -1,10 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url(//db.onlinewebfonts.com/c/be9a43357e0fe07642191e4b32995385?family=AvenirNextLTW02-Regular);
-@import url(//db.onlinewebfonts.com/c/250335a106a8ab0517c821001753b335?family=AvenirNextW05-Italic);
+@import url('http://fonts.cdnfonts.com/css/poppins');
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+@import url(//db.onlinewebfonts.com/c/028b4cfdfab5d1049178e9b1eb42f49e?family=Poppins+SemiBold);
 
+/* ---------------------------------------------------HOME--------------------------------------------------------------------------- */
+.link {
+  font-family: "Poppins";
+  font-style: normal;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+}
+.text-home {
+  margin: 5px;
+  font-family: AvenirNextLTW02-Regular;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+
+}
+a.Button:hover{
+ color: #939745;
+}
 /* ----------------------------------------------------HEADER---------------------------------------------------------------------------- */
 .Header {
-  background-image: url(https://i.imgur.com/Koun0UL.png);
+  background-image: url(https://i.imgur.com/UmZx4hG.jpg);
   height: 15em;
   background-attachment: fixed;
   background-size: cover;
@@ -14,9 +33,10 @@
   padding: 1em;
   color: #939745;
   display: inline-flex;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins-semibold", "Poppins", "sans-serif" ;
+  font-style: normal;
+  font-weight: 700;
   margin: 2em;
-  /* falta tipografia tamaño */
 }
 /* mediaqueries */
 @media (max-width: 600px) {
@@ -24,7 +44,11 @@
     background-size: auto;
   }
 }
-/* ---------------------------------------------------HOME--------------------------------------------------------------------------- 
+/* ---------------------------------------------------CATALEG-HOME---------------------------------------------------------------------------- */
+
+.CatalegHome {
+  background-color: #939745;
+}
 
 /* ----------------------------------------------------FOOTER---------------------------------------------------------------------------- */
 .footer {
@@ -56,7 +80,7 @@
   display: flex;
   flex-direction: row;
 
-  color: #fff;
+  color: rgb(255, 255, 255);
   /* grid-template-columns: auto auto auto; */
 }
 .apadrina {
@@ -110,10 +134,10 @@
   width: 250px;
 }
 .wrapper {
-  display: flex;  
+  display: flex;
   flex-flow: row wrap;
   font-weight: bold;
-  text-align: center; 
+  text-align: center;
 }
 
 .wrapper > * {
