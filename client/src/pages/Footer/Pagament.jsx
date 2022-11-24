@@ -1,6 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import '../../App.css';
 
+=======
+>>>>>>> 9cff4a9ca04965e6fc3d73bd890ef91440cbc979
 export default function MetodesPago() {
   return (
     <div>
@@ -79,7 +82,6 @@ export default function MetodesPago() {
           El bàner et redirigirà a la pàgina principal per si vols consultar més
           coses sobre la teva compte.
         </p>
-
         <img
           src="https://i.imgur.com/bXHWU7F.png"
           className="banner-pagaments"

@@ -2,12 +2,12 @@ import React from "react";
 import '../../App.css';
 import { Button, Container, Col, Row, Card } from "react-bootstrap";
 import storeItems from "../../data/products.json";
-//import StoreItem from "../components/StoreItem";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 //import axios from 'axios';
 
+<<<<<<< HEAD
 export default function Cataleg() {
   const [items, setItems] = useState([]);
   const [carItems, setCartItems] = useState([]);
@@ -25,6 +25,13 @@ export default function Cataleg() {
     }
   };
   //const [carItems, setCartItems ] = useState([]);
+=======
+export default function Cataleg(props) {
+  const [items, setItems] = useState([]);
+  // const [cartItems, setCartItems] = useState([]);
+  const { onAdd } = props;
+
+>>>>>>> 9cff4a9ca04965e6fc3d73bd890ef91440cbc979
   useEffect(() => {
     const getItems = new Promise((resolve) => {
       setTimeout(() => {
@@ -32,6 +39,7 @@ export default function Cataleg() {
       }, 1000);
     });
     getItems.then((res) => setItems(res));
+<<<<<<< HEAD
 
     // axios.get({
     //   storeItems
@@ -39,6 +47,10 @@ export default function Cataleg() {
     // .then( res => setGetItems(res.data.getAllItems))
   }, []);
 
+=======
+  }, []);
+
+>>>>>>> 9cff4a9ca04965e6fc3d73bd890ef91440cbc979
   return (
     <div className="cataleg">
       <header className="Header">
@@ -50,6 +62,7 @@ export default function Cataleg() {
       </header>
 
       <main className="">
+<<<<<<< HEAD
         <Container>
           <h1>Articles</h1>
           <section className="g-4">
@@ -83,6 +96,41 @@ export default function Cataleg() {
             </Row>
           </section>
         </Container>
+=======
+        <h1>Articles</h1>
+        <section className="g-4">
+          <Row md={2} xs={1} lg={3} className="cataleg_grid">
+            {items.map((item) => (
+              <Col key={item.id}>
+                <Card>
+                  <Card.Img
+                    className=""
+                    variant="top"
+                    src={item.image.image_1}
+                    alt={item.product}
+                  />
+                  <Card.Body>
+                    <Link to={`/detalle/${item.id}`}>
+                      <button>Mes detall</button>
+                    </Link>
+                    <button onClick={() => onAdd(item)}>
+                      Afegir al cistell
+                    </button>
+                    <div className="card_text">
+                      <Col>
+                        <div>{item.product}</div>
+                      </Col>
+                      <Col>
+                        <div>€{item.price}</div>
+                      </Col>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </section>
+>>>>>>> 9cff4a9ca04965e6fc3d73bd890ef91440cbc979
       </main>
     </div>
   );
