@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import '../../App.css';
-import { Button } from "react-bootstrap";
-=======
 // import "./App.css";
 import { Button, Form } from "react-bootstrap";
 
@@ -37,7 +33,6 @@ export default function Login() {
   const [password, setPassword] = useState('');
 
 //  LOGIN
->>>>>>> 9cff4a9ca04965e6fc3d73bd890ef91440cbc979
 
   let [authMode, setAuthMode] = useState("signin");
   const changeAuthMode = () => {

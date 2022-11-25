@@ -1,6 +1,6 @@
-@import url('http://fonts.cdnfonts.com/css/poppins');
-@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
-@import url(//db.onlinewebfonts.com/c/028b4cfdfab5d1049178e9b1eb42f49e?family=Poppins+SemiBold);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url(//db.onlinewebfonts.com/c/be9a43357e0fe07642191e4b32995385?family=AvenirNextLTW02-Regular);
+@import url(//db.onlinewebfonts.com/c/250335a106a8ab0517c821001753b335?family=AvenirNextW05-Italic);
 
 /* ---------------------------------------------------HOME--------------------------------------------------------------------------- */
 .link {
@@ -19,11 +19,12 @@
 
 }
 a.Button:hover{
- color: #939745;
-}
+  color: #939745;
+ }
+
 /* ----------------------------------------------------HEADER---------------------------------------------------------------------------- */
 .Header {
-  background-image: url(https://i.imgur.com/UmZx4hG.jpg);
+  background-image: url(https://i.imgur.com/Koun0UL.png);
   height: 15em;
   background-attachment: fixed;
   background-size: cover;
@@ -34,9 +35,9 @@ a.Button:hover{
   color: #939745;
   display: inline-flex;
   font-family: "Poppins-semibold", "Poppins", "sans-serif" ;
-  font-style: normal;
   font-weight: 700;
   margin: 2em;
+  /* falta tipografia tamaño */
 }
 /* mediaqueries */
 @media (max-width: 600px) {
@@ -44,11 +45,7 @@ a.Button:hover{
     background-size: auto;
   }
 }
-/* ---------------------------------------------------CATALEG-HOME---------------------------------------------------------------------------- */
 
-.CatalegHome {
-  background-color: #939745;
-}
 
 /* ----------------------------------------------------FOOTER---------------------------------------------------------------------------- */
 .footer {
@@ -58,15 +55,16 @@ a.Button:hover{
   width: 100%;
   background-color: #939745;
 }
-/* .footerFila1{
+.footerFila1{
   display: flex;
   justify-content: space-evenly;
+  padding: 30px 10px 20px;
 }
 
 .footerFila2{
   display: flex;
   justify-content: space-evenly;
-  margin-left: 10px;
+  padding: 20px 10px 40px 10px;
   
 } 
 .icon{
@@ -80,7 +78,7 @@ a.Button:hover{
   display: flex;
   flex-direction: row;
 
-  color: rgb(255, 255, 255);
+  color: #fff;
   /* grid-template-columns: auto auto auto; */
 }
 .apadrina {
@@ -134,10 +132,10 @@ a.Button:hover{
   width: 250px;
 }
 .wrapper {
-  display: flex;
+  display: flex;  
   flex-flow: row wrap;
   font-weight: bold;
-  text-align: center;
+  text-align: center; 
 }
 
 .wrapper > * {

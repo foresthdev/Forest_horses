@@ -1,11 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-import '../../App.css';
-//import Form from 'react-bootstrap/Form'
-=======
 import Form from 'react-bootstrap/Form'
 import Stack from 'react-bootstrap/Stack';
->>>>>>> 9cff4a9ca04965e6fc3d73bd890ef91440cbc979
 
 
 function CarritoCompra(props) {

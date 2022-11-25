@@ -14,7 +14,7 @@ export default function CatalegHome() {
               <img
                 src="https://i.imgur.com/gKq7Lay.jpg"
                 className="imghomecataleg"
-                style={{ width: "30em" }}
+                style={{ width: "350px" }}
                 alt="bag1"
               />
             </Link>
@@ -25,7 +25,7 @@ export default function CatalegHome() {
                 src="https://i.imgur.com/KucgSMo.jpg"
                 // href={} router
                 className="imghomecataleg"
-                style={{ width: "30em" }}
+                style={{ width: "350px" }}
                 alt="cup"
               />
             </Link>
@@ -36,7 +36,7 @@ export default function CatalegHome() {
                 src="https://i.imgur.com/B2guuEe.jpg"
                 // href={} router
                 className="imghomecataleg"
-                style={{ width: "30em" }}
+                style={{ width: "350px" }}
                 alt="bag2"
               />
             </Link>
