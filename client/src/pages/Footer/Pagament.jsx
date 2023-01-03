@@ -1,4 +1,6 @@
 import React from "react";
+import '../../App.css';
+
 export default function MetodesPago() {
   return (
     <div>
@@ -9,6 +11,7 @@ export default function MetodesPago() {
         </div>
       </header>
       <main>
+        <div>
         <h1>MÈTODES DE PAGAMENT</h1>
         <p>
           Nosaltres treballem amb: Paypal Transferència bancària i amb Bizum
@@ -38,6 +41,8 @@ export default function MetodesPago() {
           alt="banner Paypal"
           href="https://www.paypal.com/es/webapps/mpp/home"
         />
+        </div>
+        <div>
         <h3>BIZUM</h3>
         <p>
           Bizum és un servei íntegrament ofert per canals bancaris, per la qual
@@ -83,6 +88,7 @@ export default function MetodesPago() {
           alt="banner Bizum"
           href="https://bizum.es/"
         />
+        </div>
       </main>
     </div>
   );

@@ -1,5 +1,7 @@
 import React from "react";
+import '../../App.css';
 import Paypal from '../../components/Paypal';
+import { Button} from "react-bootstrap";
 
 export default function Donacions() {
   return (

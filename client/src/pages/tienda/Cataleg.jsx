@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Col, Row } from "react-bootstrap";
-
+import '../../App.css';
+import { Button, Container, Col, Row, Card } from "react-bootstrap";
 import storeItems from "../../data/products.json";
 import { useEffect } from "react";
 import { useState } from "react";

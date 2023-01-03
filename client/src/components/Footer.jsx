@@ -1,10 +1,13 @@
 import React from "react";
+import '../App.css';
 import { BsFillTelephoneFill, BsEnvelope, BsInstagram } from "react-icons/bs";
+import { Button, Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div className="footer">
+    
       <div className="footerFila1">
         <a
           className="telf"
@@ -59,6 +62,7 @@ function Footer() {
           </a>
         </Link>
       </div>
+      
     </div>
   );
 }

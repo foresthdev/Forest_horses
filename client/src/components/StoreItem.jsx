@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css';
 import { Card } from 'react-bootstrap';
 
 export default function StoreItem(props) {

@@ -1,10 +1,39 @@
 import React, { useState } from "react";
 // import "./App.css";
 import { Button, Form } from "react-bootstrap";
-// import P from './P'
 
 
-export default function Login(props) {
+
+
+export default function Login() {
+  const [validated, setValidated] = useState(false);
+
+  // VALIDACIÓN EMAIL Y PASSWORD
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const user = {
+      correo: "ale@mail.com",
+      contraseña: "1234",
+    }
+
+    if(email === user.correo && password === user.contraseña){
+      window.open('/', '_self')
+    }
+
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
+  const [email, setEmail] = useState('') ;
+  const [password, setPassword] = useState('');
+
+//  LOGIN
+
   let [authMode, setAuthMode] = useState("signin");
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin");
@@ -19,7 +48,8 @@ export default function Login(props) {
             <h1>Accedeix</h1>
           </div>
         </div>
-        
+  
+  {/* YA REGISTRADOS */}
       <div>
         <div className="Auth-form-container" style={{ background: "#939745" }}>
           <div className="Auth-form">
@@ -41,12 +71,16 @@ export default function Login(props) {
                   Fes click aquí
                 </span>
               </div>
+              <Form  noValidate validated={validated} onSubmit={handleSubmit}>
               <Form.Group className="mt-3" controlId="formBasicEmail">
                 <Form.Label>Adreça electrònica</Form.Label>
                 <Form.Control
                   type="email"
                   className="mt-1"
                   placeholder="Adreça electrònica"
+                  defaultValue={email}
+                  onChange={(e) =>setEmail(e.target.value)}
+                  required
                 />
               </Form.Group>
               <Form.Group className="mt-3" controlId="formBasicPassword">
@@ -55,7 +89,13 @@ export default function Login(props) {
                 type="password"
                 className="mt-1"
                 placeholder="Contrasenya"
+                defaultValue={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
+              <Form.Control.Feedback type="invalid">
+            Please provide a valid state.
+          </Form.Control.Feedback>
             </Form.Group>
             <div className="d-grid gap-2 mt-3">
               <Button
@@ -73,13 +113,15 @@ export default function Login(props) {
             <p className="text-center mt-2">
               {/* Has oblidat la <a href="#">contrasenya?</a> */}
             </p>
-            </div>
+          </Form>
+          </div>
           </div>
         </div>
       </div>
       </div>
     );}
   
+    // TODAVÍA NO RESGISTRADOS
   return (
     <div>
       <div className="Header">
@@ -126,7 +168,7 @@ export default function Login(props) {
             <div className="form-group mt-3">
               <label>Adreça electrònica</label>
               <input
-                type="email"
+                type="uname"
                 className="form-control mt-1"
                 placeholder="Adreça electrònica"
               />
@@ -134,7 +176,7 @@ export default function Login(props) {
             <div className="form-group mt-3">
               <label>Contrasenya</label>
               <input
-                type="Contrasenya"
+                type=""
                 className="form-control mt-1"
                 placeholder="Contrasenya"
               />
