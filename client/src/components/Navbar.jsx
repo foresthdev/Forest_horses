@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 function Encabezado(props) {
   const {cartItems} = props;
+  //añade productos y cantidad
   const countCartItems = cartItems.reduce((a, c) => a + c.quantity, 0);
   return (
     <div className="Navbar">
