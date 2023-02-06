@@ -58,6 +58,11 @@ export default function Cataleg(props) {
                       <Col>
                         <div>€{item.price}</div>
                       </Col>
+                      <Col>
+                      <div>
+                {item.quantity_stock} quedan en stock
+              </div>
+                      </Col>
                     </div>
                   </Card.Body>
                 </Card>

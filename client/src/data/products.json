@@ -4,20 +4,24 @@
     "product": "Tassa de ceràmica",
     "name": "Al pas i amb calma", 
     "description": "Tassa de ceràmica Al pas i amb calma de mesures 8 (ample) x 9,5 cm (alt), de capacitat: 325 ml. Apta per a rentavaixella i per a microones.", 
-    "price": 12},
+    "price": 12,
+    "quantity_stock": 12
+    },
 
     { "id":2, 
     "image": {"image_1":"https://i.imgur.com/B2guuEe.jpg" },
     "product": "Bossa de cotó",
     "name": "Color i vida", 
     "description": "Bossa ecològica de cotó 100% biodegradable de mesures 42 x 38 cm. Manilles planes de cotó natural. Rentable, reutilitzable i 100% biodegradable.", 
-    "price": 12},
+    "price": 12,
+    "quantity_stock": 12},
 
     { "id":3, 
     "image": {"image_1":"https://i.imgur.com/gKq7Lay.jpg" }, 
     "product": "Bossa de cotó ",
     "name": "Llibertat", 
     "description": "Bossa ecològica de cotó 100% biodegradable de mesures 42 x 38 cm. Manilles planes de cotó natural. Rentable, reutilitzable i 100% biodegradable.", 
-    "price": 12
+    "price": 12,
+    "quantity_stock": 12
 }
 ]

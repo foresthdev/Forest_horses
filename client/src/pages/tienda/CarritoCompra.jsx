@@ -45,6 +45,9 @@ function CarritoCompra(props) {
               <div className="me-auto">
                 {item.product}
               </div>
+              <div className="me-auto">
+                {item.quantity_stock} quedan en stock
+              </div>
               <div>
                 <button onClick={() => onAdd(item)} className="add">+</button>
                 <Form.Control className="input_quantitat" type="number" placeholder="1" value={item.quantity} />
