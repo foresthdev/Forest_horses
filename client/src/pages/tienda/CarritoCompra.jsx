@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 
 function CarritoCompra(props) {
+  //Look if user is logged. useHistory did nor work anymore it is change by useNavigate
   const navigate = useNavigate();
   //const { cartItems, setCartItems, onAdd } = props;
   const { isLoggedIn, cartItems, setCartItems, onAdd } = props;
@@ -87,6 +88,7 @@ function CarritoCompra(props) {
               <hr />
               <div className="row">
               {/*<button onClick={() => alert('Implement Checkout')}>Comprar</button>*/}
+              {/*navigate to pedidos if is loggged or to login if not */}
                 {isLoggedIn ?
                   <button onClick={() => navigate.push('/pedidos')}>Comprar</button>
                   :
