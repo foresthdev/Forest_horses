@@ -90,9 +90,9 @@ function CarritoCompra(props) {
               {/*<button onClick={() => alert('Implement Checkout')}>Comprar</button>*/}
               {/*navigate to pedidos if is loggged or to login if not */}
                 {isLoggedIn ?
-                  <button onClick={() => navigate.push('/pedidos')}>Comprar</button>
+                  <button onClick={() => navigate('/pedidos')}>Comprar</button>
                   :
-                  <button onClick={() => navigate.push('/login')}>Comprar</button>
+                  <button onClick={() => navigate('/login')}>Comprar</button>
                 }
               </div>
             </aside>
