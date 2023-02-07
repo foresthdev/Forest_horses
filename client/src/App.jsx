@@ -13,6 +13,7 @@ import Carrito from './pages/tienda/CarritoCompra';
 import Nologin from './pages/ERROR/No';
 import Login from "./pages/login/Login";
 import Mevesdades from "./pages/login/Mevesdades";
+import Pedido from './pages/tienda/Pedido'
 import { useEffect, useState } from "react";
 
 
@@ -65,6 +66,7 @@ function App() {
             <Route path="/pagament" element={<Pagament/>} />
             <Route path="/cataleg" element={<Cataleg authed={true} onAdd={onAdd} />}  />
             <Route path="/carrito" element={<Carrito authed={true} cartItems={cartItems}  setCartItems={setCartItems} onAdd={onAdd} />}  />
+            <Route path="/pedido" element={<Pedido authed={true} cartItems={cartItems}  setCartItems={setCartItems} onAdd={onAdd} />}  />
             <Route path="/login" element={<Login/>} />
             <Route path="/lesmevesdades" element={<Mevesdades/>} />
             <Route path="/" exact element={<Home/>} />
