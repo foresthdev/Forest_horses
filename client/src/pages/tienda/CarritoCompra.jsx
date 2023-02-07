@@ -1,10 +1,13 @@
 import React from "react";
 import Form from 'react-bootstrap/Form'
 import Stack from 'react-bootstrap/Stack';
+import { useNavigate } from "react-router-dom"
 
 
 function CarritoCompra(props) {
-  const { cartItems, setCartItems, onAdd } = props;
+  const navigate = useNavigate();
+  //const { cartItems, setCartItems, onAdd } = props;
+  const { isLoggedIn, cartItems, setCartItems, onAdd } = props;
 
   const onRemove = (item) => {
     const exist = cartItems.find((x) => x.id ===item.id);
@@ -83,7 +86,12 @@ function CarritoCompra(props) {
               </div>
               <hr />
               <div className="row">
-                <button onClick={() => alert('Implement Checkout')}>Comprar</button>
+              {/*<button onClick={() => alert('Implement Checkout')}>Comprar</button>*/}
+                {isLoggedIn ?
+                  <button onClick={() => navigate.push('/pedidos')}>Comprar</button>
+                  :
+                  <button onClick={() => navigate.push('/login')}>Comprar</button>
+                }
               </div>
             </aside>
           )}
