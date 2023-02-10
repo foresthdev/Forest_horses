@@ -6,18 +6,18 @@ import {
   Delete,
   Body,
   UseGuards,
-} from '@nestjs/common';
-import { CartService } from 'src/cart/service/cart/cart.service';
-import { CartEntity } from '../../cart.entity';
+} from "@nestjs/common";
+import { CartService } from "src/cart/service/cart/cart.service";
+import { CartEntity } from "../../cart.entity";
 // import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
-@Controller('api/v1/cart')
+@Controller("api/v1/cart")
 export class CartController {
   constructor(private cartService: CartService) {}
 
   //    @UseGuards(JwtAuthGuard)
   @Post()
-  async AddToCart(@Body() body, @Request() req): Promise<void> {
+  async addToCart(@Body() body, @Request() req): Promise<CartEntity> {
     const { productId, quantity } = body;
     return await this.cartService.addToCart(
       productId,
@@ -29,6 +29,6 @@ export class CartController {
   //   @UseGuards(JwtAuthGuard)
   @Get()
   async getItemsInCart(@Request() req): Promise<CartEntity[]> {
-    return await this.cartService.getItemsInCard(req.user.username);
+    return await this.cartService.getItemsInCart(req.user.username);
   }
 }
