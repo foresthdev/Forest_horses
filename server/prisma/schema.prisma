@@ -15,6 +15,7 @@ model User {
   email String  @unique
   name  String?
   hashedPassword String
+  hashedRefreshToken String?
   createAt DateTime @default(now())
   upDateAt DateTime @updatedAt()
 }

@@ -6,6 +6,10 @@ import { ProductsController } from './products/products.controller';
 import { Product } from './products/entities/product.entity';
 import { ProductsService } from './products/products.service';
 import { AuthModule } from './auth/auth.module';
+import { PrismaModule } from 'prisma/prisma.module';
+import { PrismaService } from 'prisma/prisma.service';
+import { AuthController } from './auth/auth.controller';
+import { AuthService } from './auth/auth.service';
 
 @Module({
   imports: [
@@ -21,9 +25,10 @@ import { AuthModule } from './auth/auth.module';
     }),
     TypeOrmModule.forFeature([Product]),
     AuthModule,
+    PrismaModule,
   ],
-  controllers: [AppController, ProductsController],
-  providers: [AppService, ProductsService],
+  controllers: [AppController, AuthController, ProductsController],
+  providers: [AppService, AuthService, PrismaService, ProductsService],
 })
 export class AppModule {}
 
