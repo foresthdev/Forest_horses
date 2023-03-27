@@ -31,6 +31,11 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+# prisma
+$ npx prisma migrate dev
+$ 
+npx prisma studio
+
 ## Test
 
 ```bash

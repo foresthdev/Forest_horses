@@ -22,12 +22,19 @@ export class AuthService {
     await this.prisma.user.create({
       data: {
         email,
-        hashedPassword
-      }
-    })
+        hashedPassword,
+      },
+    });
     return { message: 'signup was succeful' };
   }
-  async signin() {
+  async signin(dto: AuthDto) {
+    const { email, password } = dto;
+
+    const foundUser = await this.prisma.user.findUnique({ where: { email } });
+
+    if (!foundUser) {
+      throw new BadRequestException('Wrong credentials');
+    }
     return '';
   }
   async signout() {
