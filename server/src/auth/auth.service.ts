@@ -35,6 +35,15 @@ export class AuthService {
     if (!foundUser) {
       throw new BadRequestException('Wrong credentials');
     }
+
+    const isMatch = await this.comparePasswords({
+      password,
+      hash: foundUser.hashedPassword,
+    });
+
+    if (!isMatch) {
+      throw new BadRequestException('Wrong credentials');
+    }
     return '';
   }
   async signout() {
@@ -45,5 +54,9 @@ export class AuthService {
     const saltOrRounds = 10;
 
     return await bcrypt.hash(password, saltOrRounds);
+  }
+
+  async comparePasswords(args: { password: string; hash: string }) {
+    return await bcrypt.compare(args.password, args.hash);
   }
 }
