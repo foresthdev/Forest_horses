@@ -10,6 +10,7 @@ import { PrismaModule } from 'prisma/prisma.module';
 import { PrismaService } from 'prisma/prisma.service';
 import { AuthController } from './auth/auth.controller';
 import { AuthService } from './auth/auth.service';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -26,6 +27,11 @@ import { AuthService } from './auth/auth.service';
     TypeOrmModule.forFeature([Product]),
     AuthModule,
     PrismaModule,
+    // configure JWT module here
+    JwtModule.register({
+      secret: 'my-secret-key',
+      signOptions: { expiresIn: '1h' },
+    }),
   ],
   controllers: [AppController, AuthController, ProductsController],
   providers: [AppService, AuthService, PrismaService, ProductsService],
