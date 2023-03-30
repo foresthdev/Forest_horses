@@ -11,6 +11,7 @@ import { PrismaService } from 'prisma/prisma.service';
 import { AuthController } from './auth/auth.controller';
 import { AuthService } from './auth/auth.service';
 import { JwtModule } from '@nestjs/jwt';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -32,6 +33,7 @@ import { JwtModule } from '@nestjs/jwt';
       secret: 'my-secret-key',
       signOptions: { expiresIn: '1h' },
     }),
+    UsersModule,
   ],
   controllers: [AppController, AuthController, ProductsController],
   providers: [AppService, AuthService, PrismaService, ProductsService],
